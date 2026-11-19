@@ -1,0 +1,92 @@
+/* Kalawa print documents. Screen layout and transaction forms are preserved. */
+.ks-cetak-kop{display:none}
+@media print{
+ @page{
+  margin:12mm 12mm 16mm;
+  @bottom-left{font-family:Arial,sans-serif;font-size:8pt;color:#475569;vertical-align:middle}
+  @bottom-right{content:'Halaman ' counter(page) ' dari ' counter(pages);font-family:Arial,sans-serif;font-size:8pt;color:#475569;vertical-align:middle}
+ }
+ html{background:#fff!important}
+ body.ks-cetak-actif{background:#fff!important;color:#17212b;font-family:Arial,Helvetica,sans-serif;font-size:10pt;line-height:1.45;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ body.ks-cetak-actif .ks-app-shell,body.ks-cetak-actif .ks-app-area{display:block!important;min-height:0!important;height:auto!important;margin:0!important;padding:0!important}
+ body.ks-cetak-actif .ks-content{width:100%!important;max-width:none!important;margin:0!important;padding:0!important;min-height:0!important}
+ body.ks-cetak-actif .ks-content>*{display:none!important}
+ body.ks-cetak-actif .ks-content>.ks-cetak-document,body.ks-cetak-actif .ks-content>.ks-pay-page{display:block!important}
+ body.ks-cetak-actif .ks-content>.ks-pay-page>*{display:none!important}
+ body.ks-cetak-actif .ks-content>.ks-pay-page>.ks-cetak-document{display:block!important}
+ body.ks-cetak-actif .ks-cetak-document{border:0!important;border-radius:0!important;box-shadow:none!important;background:#fff!important;margin:0!important;padding:0!important;max-width:none!important}
+ body.ks-cetak-actif .ks-cetak-screen,body.ks-cetak-actif .ks-ui-no-print,body.ks-cetak-actif .ks-cetak-document form,body.ks-cetak-actif .ks-cetak-document button{display:none!important}
+ body.ks-cetak-actif .ks-cetak-kop{display:block!important;margin:0 0 7mm;break-inside:avoid;break-after:avoid}
+ .ks-cetak-brand-row{display:flex;align-items:center;justify-content:space-between;gap:8mm;border-bottom:1.2pt solid #a91f29;padding:0 0 3mm}
+ .ks-cetak-brand{display:flex;align-items:center;gap:4mm;min-width:0}
+ .ks-cetak-brand img{display:block;object-fit:contain;width:20mm;height:20mm;flex:none}
+ body.ks-cetak-actif .ks-cetak-brand strong{display:block;font-size:19pt;font-weight:700;line-height:1.2;letter-spacing:0;color:#17212b}
+ .ks-cetak-brand span{display:block;margin-top:1.5mm;font-size:9pt;color:#475569}
+ .ks-cetak-scope{text-align:right;max-width:70mm;font-size:9pt}
+ .ks-cetak-scope>span{display:block;color:#475569;margin-bottom:1mm}
+ .ks-cetak-scope>strong{display:block;font-weight:600}
+ .ks-cetak-contacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.5mm 7mm;padding:3mm 0;border-bottom:.5pt solid #ccd3db;font-size:8.5pt;line-height:1.4}
+ .ks-cetak-contacts>div:only-child{grid-column:1/-1}
+ .ks-cetak-contacts strong,.ks-cetak-contacts>div>span{display:block}
+ .ks-cetak-contacts strong>span{font-weight:400;color:#475569}
+ .ks-cetak-contacts>div>span{color:#475569;overflow-wrap:anywhere}
+ .ks-cetak-heading{margin:5mm 0 4mm}
+ body.ks-cetak-actif .ks-cetak-heading h1{font-size:17pt;font-weight:700;line-height:1.25;margin:0 0 1.5mm;color:#17212b;letter-spacing:0}
+ .ks-cetak-heading p{font-size:9pt!important;color:#475569;margin:0}
+ .ks-cetak-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2mm 7mm;margin:0;padding:3mm 0;border-top:.5pt solid #ccd3db;border-bottom:.5pt solid #ccd3db;font-size:9pt;line-height:1.4}
+ .ks-cetak-meta>div{display:grid;grid-template-columns:25mm minmax(0,1fr);gap:2mm;break-inside:avoid}
+ .ks-cetak-meta dt{color:#475569;font-size:9pt;font-weight:400;margin:0}
+ .ks-cetak-meta dd{margin:0;overflow-wrap:anywhere;font-size:9pt}
+ .ks-cetak-note{padding:2.5mm 3mm;border-left:2pt solid #a91f29;background:#f8f9fb;font-size:9pt!important;margin:3mm 0 0}
+ body.ks-cetak-actif .ks-cetak-document .tablewrap,body.ks-cetak-actif .ks-cetak-document .ks-pay-tablewrap{overflow:visible!important;border:0!important;border-radius:0!important;margin:0 0 4mm}
+ body.ks-cetak-actif .ks-cetak-document table{display:table!important;width:100%!important;min-width:0!important;border-collapse:collapse;font-size:9pt;font-variant-numeric:tabular-nums}
+ body.ks-cetak-actif .ks-cetak-document thead{display:table-header-group!important;position:static!important;width:auto!important;height:auto!important;overflow:visible!important;clip:auto!important}
+ body.ks-cetak-actif .ks-cetak-document tbody{display:table-row-group!important}
+ body.ks-cetak-actif .ks-cetak-document tr,body.ks-cetak-actif .ks-cetak-document tr.ks-report-paged-out{display:table-row!important;break-inside:avoid}
+ body.ks-cetak-actif .ks-cetak-document th,body.ks-cetak-actif .ks-cetak-document td{display:table-cell!important;padding:2.5mm 2mm!important;border-bottom:.5pt solid #d9dee5!important;vertical-align:top;white-space:normal;overflow-wrap:anywhere;font-size:9pt;line-height:1.45}
+ body.ks-cetak-actif .ks-cetak-document th{font-weight:700;color:#243344;background:#f1f3f5!important;border-top:.7pt solid #b7c0cb!important;border-bottom:.7pt solid #b7c0cb!important}
+ body.ks-cetak-actif .ks-cetak-document td[data-label]::before{display:none!important}
+ body.ks-cetak-actif .ks-cetak-document td.ks-ui-number{white-space:nowrap;text-align:right}
+ body.ks-cetak-actif .ks-cetak-document th.ks-ui-number{text-align:right}
+ body.ks-cetak-actif .ks-cetak-document table small{font-size:8pt!important;line-height:1.4;display:block;margin-top:1mm;color:#475569!important}
+ body.ks-cetak-actif .ks-cetak-document a{color:inherit!important;text-decoration:none!important}
+ body.ks-cetak-actif .ks-cetak-document .ks-ui-identity{min-width:0!important}
+ body.ks-cetak-actif .ks-cetak-document h2{font-size:12pt;line-height:1.3;margin:5mm 0 2mm;break-after:avoid}
+ body.ks-cetak-actif .ks-cetak-document h3{font-size:10pt;line-height:1.35;margin:4mm 0 1.5mm;break-after:avoid}
+ body.ks-cetak-actif .ks-cetak-document p,body.ks-cetak-actif .ks-cetak-document dt,body.ks-cetak-actif .ks-cetak-document dd{font-size:9pt}
+ body.ks-cetak-actif .ks-cetak-document .ks-ui-history details dl{display:grid;grid-template-columns:21mm minmax(0,1fr);gap:1.5mm 2mm;margin:0!important;font-size:9pt!important;line-height:1.4}
+ body.ks-cetak-actif .ks-cetak-document .ks-ui-history details dl dt{font-size:9pt;font-weight:600;margin:0!important}
+ body.ks-cetak-actif .ks-cetak-document .ks-ui-history details dl dd{font-size:9pt;margin:0!important}
+ body.ks-cetak-actif .ks-cetak-document .ks-ui-history details{min-width:0!important}
+ body.ks-cetak-actif .ks-cetak-document .ks-ui-history summary{display:none!important}
+ body.ks-cetak-actif .ks-cetak-document .ks-ui-badge,body.ks-cetak-actif .ks-cetak-document .ks-wo-status{font-size:8pt;border:.5pt solid #c5cdd6;border-radius:2px;padding:.8mm 1.2mm;white-space:nowrap;font-weight:500;line-height:1.3}
+ body.ks-cetak-actif .ks-cetak-document .ks-r03-facts,body.ks-cetak-actif .ks-cetak-document .ks-pay-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3mm 6mm;margin:0 0 5mm}
+ body.ks-cetak-actif .ks-cetak-document .ks-pay-details>div{border:0;border-bottom:.5pt solid #d9dee5;border-radius:0;padding:0 0 2mm}
+ body.ks-cetak-actif .ks-cetak-document .ks-pay-summary,body.ks-cetak-actif .ks-cetak-document .ks-r03-totals{max-width:100%;width:90mm;margin:5mm 0 5mm auto;padding:2mm 0;border:0;border-top:1pt solid #b7c0cb;border-bottom:1pt solid #b7c0cb;border-radius:0;background:#fff;font-variant-numeric:tabular-nums;break-inside:avoid}
+ body.ks-cetak-actif .ks-cetak-document .ks-pay-summary>div{font-size:9pt;gap:3mm;padding:1.5mm 0}
+ body.ks-cetak-actif .ks-cetak-document .ks-ui-payment-total{font-size:11pt!important;border-top:.7pt solid #b7c0cb;margin-top:1.5mm;padding-top:2.5mm;font-weight:700}
+ body.ks-cetak-actif .ks-cetak-document .ks-r03-items section{margin:4mm 0}
+ body.ks-cetak-actif .ks-cetak-document .ks-r03-note{font-size:8.5pt;line-height:1.45;padding:2.5mm 3mm;margin:3mm 0;border:.5pt solid #d9dee5;border-left:2pt solid #a91f29;break-inside:avoid}
+ body.ks-cetak-actif .ks-cetak-document .ks-pagination{margin:1.5mm 0 4mm;padding:0;border:0}
+ body.ks-cetak-actif .ks-cetak-document .ks-page-summary{font-size:8pt}
+ body.ks-cetak-actif .ks-cetak-document .ks-page-links,body.ks-cetak-actif .ks-cetak-document .ks-page-jump{display:none!important}
+ body.ks-cetak-actif .ks-ui-report-result .ks-pagination{display:none!important}
+ body.ks-cetak-actif #hasil-laporan.ks-ui-history td:first-child{width:15%}
+ body.ks-cetak-actif #hasil-laporan.ks-ui-history td:last-child{width:30%}
+ body.ks-cetak-actif .ks-cetak-document .ks-pay-details{grid-template-columns:repeat(4,minmax(0,1fr));gap:3mm;margin:0 0 4mm}
+ body.ks-cetak-actif .ks-cetak-document .ks-pay-details strong{font-size:9pt;line-height:1.4}
+ body.ks-cetak-actif .ks-cetak-document .ks-r03-facts{grid-template-columns:repeat(3,minmax(0,1fr));gap:3mm 5mm;margin-bottom:4mm}
+ body.ks-cetak-actif .ks-cetak-document .ks-cetak-receipt-ref{font-size:8.5pt;margin:3mm 0;break-inside:avoid}
+ body.ks-cetak-actif .ks-cetak-document .ks-cetak-corp-total{display:flex;justify-content:space-between;align-items:baseline;gap:5mm;width:90mm;max-width:100%;margin:5mm 0 4mm auto;padding:3mm 0;border-top:1pt solid #b7c0cb;border-bottom:1pt solid #b7c0cb;font-size:11pt;font-variant-numeric:tabular-nums;break-inside:avoid}
+ body.ks-cetak-actif .ks-cetak-document #tabel-rincian-tagihan a{display:none!important}
+}
+
+@media print{
+ body.ks-cetak-actif .ks-cetak-rincian .ks-cetak-kop{margin-bottom:5mm}
+ body.ks-cetak-actif .ks-cetak-rincian .ks-r03-items section{margin:3mm 0}
+ body.ks-cetak-actif .ks-cetak-rincian .ks-r03-items h3{margin-top:2mm;margin-bottom:1mm}
+ body.ks-cetak-actif .ks-cetak-rincian .tablewrap{margin-bottom:2mm}
+ body.ks-cetak-actif .ks-cetak-rincian .ks-r03-totals{margin-top:3mm;margin-bottom:3mm;padding:1mm 0}
+ body.ks-cetak-actif .ks-cetak-garansi{break-inside:avoid}
+ body.ks-cetak-actif .ks-cetak-garansi p{margin:1.5mm 0}
+}

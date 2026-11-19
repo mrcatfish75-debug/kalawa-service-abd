@@ -1,0 +1,43 @@
+/* R01E | Kalawa Workspace R02.1 compatible; no global HTML overrides. */
+.ks-pay-page {color:#142637;max-width:1420px;margin-inline:auto;padding-bottom:2rem}
+.ks-pay-title{display:flex;gap:1rem;align-items:center;justify-content:space-between;margin:0 0 1.3rem}
+.ks-pay-title h1{font-size:clamp(1.35rem,2vw,1.75rem);margin:0 0 .25rem;font-weight:750;letter-spacing:-.025em}
+.ks-pay-title p,.ks-pay-card-head p{font-size:.93rem;color:#64758d;margin:.3rem 0 0}
+.ks-pay-label{font-size:.75rem;border:1px solid #f6d9a2;background:#fffbef;color:#7c4500;border-radius:99px;padding:.5rem .75rem;white-space:nowrap}
+.ks-pay-card{margin:0 0 1.15rem;background:#fff;border:1px solid #dae3ee;border-radius:13px;padding:1.2rem;box-shadow:0 2px 3px rgba(22,36,56,.035)}
+.ks-pay-card-head{display:flex;justify-content:space-between;align-items:start;gap:1rem;margin-bottom:1rem}
+.ks-pay-card h2{font-size:1.12rem;font-weight:750;margin:0}
+.ks-pay-card h3{font-size:1rem;font-weight:730;margin:.2rem 0 .5rem}
+.ks-pay-card-head a,.ks-pay-link{display:inline-flex;align-items:center;justify-content:center;padding:.55rem .75rem;text-decoration:none;border:1px solid #dfafb5;border-radius:8px;color:#ac1d27;font-weight:650;font-size:.85rem;white-space:nowrap;background:#fff}
+.ks-pay-card-head a:hover,.ks-pay-link:hover{background:#fff2f3}
+.ks-pay-details{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1rem}
+.ks-pay-details>div{padding:.85rem;border:1px solid #dce5ef;border-radius:9px;min-width:0}
+.ks-pay-details span,.ks-pay-details strong{display:block}
+.ks-pay-details span{font-size:.76rem;color:#637188;margin-bottom:.25rem}
+.ks-pay-details strong{overflow-wrap:anywhere;font-size:.93rem}
+.ks-pay-summary{margin:0 0 1.1rem;border-top:1px solid #e1e7ee;border-bottom:1px solid #e1e7ee}
+.ks-pay-summary>div{display:flex;justify-content:space-between;gap:1rem;padding:.65rem 0;font-size:.9rem}
+.ks-pay-summary>div strong{text-align:right}
+.ks-pay-subtotal{font-weight:750;border-top:1px solid #e1e7ee}
+.ks-pay-form{background:#fafbfe;border:1px solid #e1e7ee;border-radius:10px;padding:1rem}
+.ks-pay-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:.7rem 0 1rem}
+.ks-pay-filter{display:flex;flex-wrap:wrap;align-items:end;gap:.8rem;margin:1rem 0}
+.ks-pay-form label,.ks-pay-filter label{font-weight:650;display:flex;flex-direction:column;gap:.45rem;font-size:.87rem;min-width:0}
+.ks-pay-filter label:nth-child(2){flex:1;min-width:200px}
+.ks-pay-form input,.ks-pay-form select,.ks-pay-filter input,.ks-pay-filter select{width:100%;min-height:43px;border:1px solid #c9d6e5;background:white;border-radius:8px;padding:.65rem .75rem;font:inherit;font-weight:400;color:#152638}
+.ks-pay-form input:focus-visible,.ks-pay-form select:focus-visible,.ks-pay-filter input:focus-visible,.ks-pay-filter select:focus-visible{outline:2px solid #b8202b;outline-offset:1px}
+.ks-pay-form label small,.ks-pay-help,.ks-pay-footnote{font-size:.78rem;color:#637188;line-height:1.5}
+.ks-pay-button{min-height:43px;background:#b91c23;border:1px solid #b91c23;color:#fff;border-radius:8px;font-size:.86rem;font-weight:750;padding:.65rem 1.15rem;cursor:pointer;white-space:nowrap}
+.ks-pay-button:hover{background:#9d1720}.ks-pay-button:disabled{opacity:.55;cursor:wait}
+.ks-pay-alert{font-size:.86rem;line-height:1.5;padding:.85rem 1rem;margin:0 0 1rem;border-radius:8px;border:1px solid #dce5ef}
+.ks-pay-alert-ok{background:#ebf9f0;border-color:#afe6c3;color:#126334}
+.ks-pay-alert-error{background:#fff1f2;border-color:#f4bdc2;color:#a31b24}
+.ks-pay-alert-info{background:#fffaef;border-color:#f3dfab;color:#79500b}
+.ks-pay-tablewrap{overflow:auto;max-width:100%;border-radius:6px}
+.ks-pay-table{border-collapse:collapse;width:100%;min-width:850px;font-size:.86rem}
+.ks-pay-table th{background:#f4f7fb;color:#516787;text-align:left;padding:.8rem;font-size:.76rem;font-weight:700}
+.ks-pay-table td{padding:.75rem .8rem;border-bottom:1px solid #e0e6ef;vertical-align:middle}
+.ks-pay-table td small{display:block;color:#69809b;margin-top:.25rem}
+.ks-pay-status{border-radius:99px;background:#e9eff9;color:#235093;font-size:.75rem;padding:.28rem .5rem;font-weight:700}
+.ks-pay-footnote{margin:1rem 0 0}
+@media(max-width:720px){.ks-pay-title{align-items:flex-start;flex-direction:column}.ks-pay-card{padding:.95rem}.ks-pay-details,.ks-pay-form-grid{grid-template-columns:1fr}.ks-pay-filter{align-items:stretch;flex-direction:column}.ks-pay-filter label:nth-child(2){width:100%}.ks-pay-filter .ks-pay-button,.ks-pay-filter .ks-pay-link{width:100%}.ks-pay-card-head{flex-wrap:wrap}}

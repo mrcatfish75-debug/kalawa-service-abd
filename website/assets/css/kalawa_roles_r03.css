@@ -1,0 +1,123 @@
+/* Kalawa R03. Spacing, type, and quiet surfaces adapted from unslop by
+   Damir Sokolovsky (@heydamir), CC BY 4.0. Brand and workflows preserved. */
+input[type="hidden"]{display:none!important}
+body.ks-workspace{font-family:Arial,system-ui,sans-serif;background:#f7f8fa;line-height:1.5}
+.ks-workspace .ks-nav-icon{width:18px;height:18px;stroke-width:1.5}
+.ks-workspace .ks-side-nav{gap:4px;padding:16px 12px 24px}
+.ks-workspace .ks-side-link{min-height:36px;padding:8px 12px;gap:8px;font-weight:400;font-size:14px;border-radius:8px}
+.ks-workspace .ks-side-link[aria-current=page]{font-weight:600}
+.ks-workspace .ks-side-group-title{margin:24px 12px 8px;font-weight:500}
+.ks-workspace .ks-brand-name strong{font-size:14px;font-weight:600;letter-spacing:0}
+.ks-workspace .ks-test-flag{border-radius:4px;background:#f5f5f5;color:#52525b;border-color:#e4e4e7;padding:4px 8px}
+.ks-workspace .ks-topbar-user{font-weight:500}
+.ks-content h1,.ks-content .ks-pay-title h1{font-size:28px;font-weight:500;letter-spacing:0;line-height:1.25}
+.ks-content h2,.ks-content .ks-wo h2{font-size:18px;font-weight:600;letter-spacing:0}
+.ks-content .ks-wo-eyebrow{text-transform:none;letter-spacing:0;font-weight:500}
+.ks-content h3{font-size:15px;font-weight:600;line-height:1.5;margin:24px 0 12px}
+.ks-content .panel,.ks-content .ks-pay-card{box-shadow:0 1px 2px #00000005;border-radius:12px;padding:24px;margin:24px 0}
+.ks-content :where(button,.btn,label,th,strong,.ks-ui-action,.ks-pay-button){font-weight:600}
+.ks-content .ks-ui-badge,.ks-content .ks-wo-status{font-weight:500;border-radius:4px}
+.ks-content table{font-variant-numeric:tabular-nums}
+.ks-content .ks-r03-note{padding:16px 20px;border:1px solid #e2e5e9;border-left:3px solid #b91c1c;border-radius:8px;background:#fff;color:#475569;max-width:100%;line-height:1.65;margin:20px 0}
+.ks-r03-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 32px;margin:24px 0}
+.ks-r03-facts dt{color:#525b68;font-size:13px;margin:0 0 4px}
+.ks-r03-facts dd{margin:0;overflow-wrap:anywhere}
+.ks-r03-prose{max-width:80ch;white-space:normal;overflow-wrap:anywhere;line-height:1.7}
+.ks-r03-items section{margin:24px 0}
+.ks-r03-items .tablewrap{border:1px solid #e2e5e9;border-radius:8px}
+.ks-r03-items table{min-width:480px}
+.ks-r03-items th,.ks-r03-items td{padding:12px 16px}
+.ks-r03-totals{max-width:480px;margin:24px 0 24px auto;padding:16px 20px;background:#f7f8fa;border:1px solid #e2e5e9;border-radius:8px;font-variant-numeric:tabular-nums}
+.ks-r03-totals p{display:flex;justify-content:space-between;gap:24px}
+.ks-r03-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px;margin:20px 0 32px}
+.ks-r03-form-grid label{margin:0}
+.ks-r03-form-grid input,.ks-r03-form-grid textarea,.ks-r03-form-grid select{display:block;width:100%;margin:8px 0 4px}
+.ks-r03-form-grid small{display:block;color:#525b68;font-weight:400;font-size:13px;line-height:1.5}
+.ks-r03-form-foot{border-top:1px solid #e2e5e9;padding-top:20px}
+.ks-r03-form-foot p{max-width:80ch}
+.ks-r03-guide{list-style:decimal;margin:0;padding-left:24px}
+.ks-r03-guide li{padding:20px 0 20px 8px;border-bottom:1px solid #e2e5e9}
+.ks-r03-guide li:last-child{border:0}
+.ks-r03-guide h3{margin:0 0 8px}
+.ks-r03-guide p{color:#475569;max-width:80ch;margin:0 0 12px;line-height:1.7}
+.ks-r03-help{display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:13px;color:#525b68;padding:12px 0 0;margin-top:32px;border-top:1px solid #e2e5e9}
+@media(max-width:767px){
+.ks-content h1,.ks-content .ks-pay-title h1{font-size:24px}
+.ks-content .panel,.ks-content .ks-pay-card{padding:16px;margin:20px 0}
+.ks-r03-form-grid,.ks-r03-facts{grid-template-columns:1fr;gap:16px}
+.ks-workspace .ks-side-link{min-height:44px}
+.ks-r03-help{align-items:flex-start;flex-direction:column}
+}
+@media print{
+.ks-content .ks-r03-help{display:none!important}
+.ks-content .panel,.ks-content .ks-pay-card{padding:0;border:0;box-shadow:none}
+.ks-r03-items .tablewrap{overflow:visible;border:0}
+.ks-r03-items table{min-width:0}
+.ks-r03-items th,.ks-r03-items td{padding:6px 4px}
+.ks-r03-facts{gap:12px;margin:16px 0}
+.ks-r03-totals{break-inside:avoid}
+}
+/* R04 · Kalawa's operational navigation. No remote fonts or dependencies. */
+.ks-workspace{--ks-sidebar-width:248px;--ks-canvas:#f7f8fa}
+.ks-workspace .ks-sidebar{overflow:hidden}
+.ks-workspace .ks-sidebar-brand,.ks-workspace .ks-sidebar-footer{flex-shrink:0}
+.ks-workspace .ks-side-nav{min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.ks-nav-scroll{height:2px;background:#f1f3f5;flex-shrink:0}
+.ks-nav-scroll span{display:block;height:100%;background:var(--ks-primary);width:0}
+.ks-account-context{display:flex;gap:8px;align-items:center;color:#475569;font-size:12px;margin:0 0 20px}
+.ks-account-context span+span::before{content:'·';margin-right:8px}
+.ks-workspace .ks-command-open{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ks-border);background:#fff;color:#475569;border-radius:6px;padding:7px 10px;min-height:36px;cursor:pointer;font:inherit;font-size:13px}
+.ks-command-open kbd{font:inherit;font-size:11px;background:#f7f8fa;border:1px solid #e2e5e9;padding:1px 4px;border-radius:3px;margin-left:8px}
+.ks-command{padding:0;width:min(520px,calc(100vw - 32px));max-height:80dvh;border:1px solid #d4d9e0;border-radius:12px;color:#111827;background:#fff;box-shadow:0 16px 48px #11182726;overflow:auto}
+.ks-command::backdrop{background:#11182766}
+.ks-command-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px 12px}
+.ks-command-head h2{margin:0;font-size:17px;font-weight:600}
+.ks-command-head button{display:grid;place-items:center;min-width:44px;min-height:44px;border:0;background:#fff;color:#475569;border-radius:6px;cursor:pointer}
+.ks-command input{display:block;width:calc(100% - 40px);margin:0 20px 12px;border:1px solid #8291a3;background:#fff;color:#111827;border-radius:6px;min-height:44px;padding:10px 12px;font:inherit;font-size:16px}
+.ks-command-results{padding:0 12px 12px;max-height:45dvh;overflow:auto}
+.ks-command-link{display:flex;align-items:center;gap:12px;padding:12px;border-radius:6px;text-decoration:none;color:#334155;font-size:14px;min-height:44px}
+.ks-command-link:hover,.ks-command-link:focus-visible{background:#fef2f2;color:#b91c1c}
+.ks-command-link[aria-current=page]{color:#b91c1c;font-weight:600}
+.ks-command-empty{margin:16px 24px;color:#475569}
+.ks-command-help{padding:12px 20px;margin:0;border-top:1px solid #e2e5e9;color:#475569;font-size:12px}
+.ks-bottom-nav{display:none}
+.ks-pagination{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:20px 0 4px;padding-top:16px;border-top:1px solid #e2e5e9;scroll-margin-top:24px}
+.ks-page-summary{font-size:13px;color:#475569;margin:0;flex-basis:100%;font-variant-numeric:tabular-nums}
+.ks-page-links{display:flex;align-items:center;gap:4px;max-width:100%;flex-wrap:wrap}
+.ks-content .ks-page-links a{display:grid;place-items:center;min-width:40px;min-height:40px;padding:6px;border:1px solid #d4d9e0;border-radius:6px;background:#fff;color:#334155;text-decoration:none;font-size:13px;font-weight:500}
+.ks-content .ks-page-links a:hover{background:#f7f8fa}
+.ks-content .ks-page-links a[aria-current=page]{background:#b91c1c;border-color:#b91c1c;color:#fff}
+.ks-page-gap{padding:0 4px;color:#475569}
+.ks-content .ks-page-jump{display:flex;align-items:center;gap:8px;margin:0}
+.ks-content .ks-page-jump label{margin:0;font-weight:400;font-size:13px;white-space:nowrap}
+.ks-content .ks-page-jump input{width:76px;min-height:40px;padding:8px;font-variant-numeric:tabular-nums}
+.ks-content .ks-page-jump button{min-height:40px;padding:8px 12px}
+.ks-content table tr.ks-report-paged-out{display:none}
+@media(min-width:1100px){.ks-workspace .ks-side-nav{padding-top:12px}.ks-workspace .ks-sidebar-footer{padding-bottom:12px}.ks-workspace .ks-topbar{height:64px}}
+@media(max-width:1099px){.ks-workspace .ks-side-link{min-height:44px}.ks-command-open kbd{display:none}}
+@media(max-width:767px){
+ .ks-workspace .ks-topbar{position:sticky;top:0;z-index:30;gap:8px;padding:0 12px}
+ .ks-topbar-left,.ks-topbar-right{gap:8px}
+ .ks-workspace .ks-command-open{width:44px;height:44px;padding:0;justify-content:center}
+ .ks-command-open span,.ks-command-open kbd{display:none}
+ .ks-workspace .ks-content.wrap{padding:16px 16px calc(96px + env(safe-area-inset-bottom))}
+ .ks-account-context{font-size:12px;margin-bottom:16px}
+ .ks-bottom-nav{display:flex;position:fixed;z-index:50;inset:auto 0 0;background:#fff;border-top:1px solid #dce1e7;padding:4px 8px calc(4px + env(safe-area-inset-bottom));gap:4px}
+ .ks-bottom-nav a,.ks-bottom-nav button{display:flex;flex:1;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:0;min-height:56px;border:0;border-radius:6px;background:#fff;color:#475569;text-decoration:none;font-family:inherit;font-size:11px;cursor:pointer}
+ .ks-bottom-nav a[aria-current=page]{color:#b91c1c;background:#fef2f2;font-weight:600}
+ .ks-workspace .ks-bottom-nav .ks-nav-icon{width:20px;height:20px}
+ .ks-content .ks-page-links a{min-width:40px;min-height:44px}
+ .ks-content .ks-page-jump input,.ks-content .ks-page-jump button{min-height:44px}
+ .ks-page-summary span{display:block;margin-top:4px}
+ .ks-content input:not([type=hidden]):not([type=checkbox]):not([type=radio]),.ks-content select,.ks-content textarea{font-size:16px}
+ .ks-command{margin-top:16px}
+}
+@media(max-width:374px){.ks-page-links{gap:2px}.ks-content .ks-page-links a{min-width:34px}.ks-page-gap{padding:0 2px}}
+@media print{
+ .ks-command,.ks-bottom-nav,.ks-account-context,.ks-page-links,.ks-page-jump,.ks-nav-scroll{display:none!important}
+ .ks-content table tr.ks-report-paged-out{display:table-row!important}
+ .ks-page-summary{font-size:10pt}.ks-pagination{margin:12px 0;border-top:0;padding:0}
+ .ks-ui-report-result .ks-pagination{display:none!important}
+}
+
+@media print{.ks-content .ks-wo .ks-wo-table table{display:table!important}.ks-wo-mobile-cards{display:none!important}}

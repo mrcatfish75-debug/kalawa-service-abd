@@ -1,0 +1,140 @@
+/* Kalawa Service — lapisan presentasi kasir, gudang, dan laporan. */
+.ks-content .ks-ui-page-head,
+.ks-content .ks-ui-section-head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ks-content .ks-ui-page-head{margin:4px 0 20px}
+.ks-content .ks-ui-page-head h1{margin:0}
+.ks-content .ks-ui-page-head p{color:#475569;margin:6px 0 0;font-size:14px}
+.ks-content .ks-ui-section-head{margin-bottom:12px;align-items:flex-start}
+.ks-content .ks-ui-section-head h2{margin:0 0 5px}
+.ks-content .ks-ui-section-head p{margin:0;font-size:13px}
+.ks-content .ks-ui-scope{display:inline-flex;align-items:center;gap:7px;color:#475569;font-size:12px;font-weight:600;line-height:1.4;background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px;max-width:100%}
+.ks-ui-scope svg{width:16px;height:16px;flex-shrink:0}
+.ks-content .ks-ui-count{display:inline-flex;align-items:center;color:#475569;background:#f1f5f9;border-radius:6px;padding:5px 9px;font-size:12px;white-space:nowrap}
+.ks-content .ks-ui-badge{display:inline-flex;align-items:center;width:fit-content;font-size:12px;font-weight:650;line-height:1.5;white-space:nowrap;padding:4px 9px;border-radius:6px;margin:0;vertical-align:middle}
+.ks-content .ks-ui-badge--success{color:#166534;background:#e9f7ee}
+.ks-content .ks-ui-badge--warning{color:#854d0e;background:#fef3c7}
+.ks-content .ks-ui-badge--info{color:#1d4ed8;background:#eaf0ff}
+.ks-content .ks-ui-badge--neutral{color:#475569;background:#f1f5f9}
+.ks-content td.ks-ui-number,.ks-content th.ks-ui-number{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ks-content .ks-ui-cards td{padding-top:15px;padding-bottom:15px}
+.ks-content .ks-ui-cards td strong{font-weight:650}
+.ks-content .ks-ui-cards td small{display:block;color:#475569;font-size:12px;line-height:1.45;margin-top:5px}
+.ks-content .ks-ui-cards .ks-ui-identity{min-width:180px}
+.ks-content .ks-ui-cards .ks-ui-identity strong{overflow-wrap:anywhere}
+.ks-content .ks-ui-action{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:9px 13px;border:1px solid #cbd5e1;border-radius:8px;background:#fff;color:#334155;text-decoration:none;white-space:nowrap;font-size:13px;font-weight:650;line-height:1.5;cursor:pointer}
+.ks-content .ks-ui-action:hover{background:#f8fafc;border-color:#94a3b8;color:#0f172a}
+.ks-content .ks-ui-action--primary{background:var(--ks-primary);border-color:var(--ks-primary);color:#fff}
+.ks-content .ks-ui-action--primary:hover{background:var(--ks-primary-hover);border-color:var(--ks-primary-hover);color:#fff}
+.ks-content .ks-ui-filter-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.ks-content .ks-ui-filter-actions .ks-ui-action{padding:9px 13px;font-size:13px;min-height:44px}
+.ks-ui-sr-only{position:absolute!important;left:0;top:0;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.ks-content .ks-ui-empty td{padding:30px 16px;color:#475569;text-align:center;white-space:normal}
+.ks-content .ks-ui-optional{font-size:12px;font-weight:400;color:#475569}
+
+/* Kolom filter dan tombol berada pada garis dasar yang sama. */
+.ks-content .ks-pay-filter{display:grid;grid-template-columns:minmax(190px,230px) minmax(180px,1fr) auto;align-items:end;gap:12px;margin:20px 0}
+.ks-content .ks-pay-filter label{margin:0;gap:7px;font-size:13px}
+.ks-content .ks-pay-filter label:nth-child(2){min-width:0}
+.ks-content .ks-pay-filter input,.ks-content .ks-pay-filter select{margin:0;min-height:44px}
+.ks-content .ks-pay-filter .ks-pay-link,.ks-content .ks-pay-link{min-height:44px;border-color:#cbd5e1;color:#334155}
+.ks-content .ks-pay-title{margin-top:4px;flex-wrap:wrap}
+.ks-content .ks-pay-title h1{font-size:26px}
+.ks-content .ks-pay-title p,.ks-content .ks-pay-card-head p{font-size:14px}
+.ks-content .ks-pay-table{min-width:760px}
+.ks-content .ks-pay-summary .ks-ui-badge{align-self:center}
+.ks-content .ks-ui-payment-total{padding:16px 0;font-size:17px;color:#0f172a}
+.ks-content .ks-pay-details .ks-ui-badge{display:inline-flex}
+.ks-content .ks-pay-form input,.ks-content .ks-pay-form select{margin-bottom:0}
+.ks-content .ks-pay-form label{margin:0}
+
+/* Empat jenis laporan, masing-masing dengan filter yang digunakan. */
+.ks-ui-report-nav{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 18px;padding:5px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;width:fit-content;max-width:100%}
+.ks-content .ks-ui-report-nav a{display:inline-flex;align-items:center;min-height:44px;padding:10px 14px;border-radius:7px;text-decoration:none;font-size:13px;font-weight:650;color:#475569}
+.ks-content .ks-ui-report-nav a:hover{background:#f8fafc;color:#0f172a}
+.ks-content .ks-ui-report-nav a[aria-current="page"]{background:#fef2f2;color:#b91c1c}
+.ks-content .ks-ui-report-filter h2{margin:0 0 5px}
+.ks-content .ks-ui-report-filter>p{font-size:13px;margin:0 0 18px}
+.ks-ui-report-fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:end}
+.ks-content .ks-ui-report-fields input,.ks-content .ks-ui-report-fields select{width:100%;margin:0}
+.ks-ui-report-fields>.ks-ui-filter-actions{grid-column:1/-1;justify-content:flex-end;padding-top:14px;border-top:1px solid #f1f5f9}
+.ks-content .ks-ui-report-result>p{font-size:13px}
+.ks-content .ks-ui-note{background:#fffbeb;border-color:#fde68a;color:#854d0e}
+.ks-content .ks-ui-history{min-width:1060px}
+.ks-content .ks-ui-history td{max-width:240px;vertical-align:top}
+.ks-content .ks-ui-history td.ks-ui-identity{min-width:180px}
+.ks-ui-status-pair{display:flex;align-items:flex-start;flex-direction:column;gap:6px}
+.ks-content .ks-ui-history details{min-width:130px}
+.ks-content .ks-ui-history details[open]{min-width:200px}
+.ks-content .ks-ui-history summary{cursor:pointer;min-height:44px;padding:10px 0;color:#b91c1c;font-weight:650;white-space:nowrap}
+.ks-content .ks-ui-history details dl{margin:4px 0;font-size:12px;line-height:1.6}
+.ks-content .ks-ui-history details dt{color:#475569;font-size:12px;font-weight:650;margin-top:9px}
+.ks-content .ks-ui-history details dd{margin:2px 0 0;white-space:normal;overflow-wrap:anywhere}
+
+.ks-content .ks-stock-filters.ks-ui-scoped-filters{grid-template-columns:minmax(200px,1.5fr) minmax(180px,1fr) auto}
+.ks-content .ks-stock table.ks-ui-cards{min-width:600px}
+.ks-content .ks-stock .ks-stock-list .ks-stock-heading h2{margin-bottom:5px}
+
+@media screen and (max-width:1199px){
+  .ks-ui-report-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ks-content .ks-pay-filter{grid-template-columns:200px minmax(160px,1fr)}
+  .ks-content .ks-pay-filter .ks-ui-filter-actions{grid-column:1/-1;justify-content:flex-end}
+  .ks-content .ks-stock-filters.ks-ui-scoped-filters{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .ks-content .ks-stock-filters .ks-ui-filter-actions{grid-column:1/-1;justify-content:flex-end}
+}
+@media screen and (max-width:767px){
+  .ks-content .ks-pay-title h1{font-size:24px}
+  .ks-content .ks-ui-page-head,.ks-content .ks-pay-title{align-items:flex-start;gap:12px}
+  .ks-ui-report-nav{width:100%;display:grid;grid-template-columns:1fr 1fr}
+  .ks-content .ks-ui-report-nav a{font-size:12px;white-space:normal;line-height:1.5;padding:10px 12px}
+  .ks-content .ks-pay-filter{grid-template-columns:1fr}
+  .ks-content .ks-pay-filter label:nth-child(2){width:100%}
+  .ks-content .ks-pay-filter .ks-ui-filter-actions{display:grid;grid-template-columns:1fr auto}
+  .ks-content .ks-pay-card{padding:16px}
+  .ks-content .ks-ui-cards,.ks-content .ks-pay-table.ks-ui-cards,.ks-content .ks-stock table.ks-ui-cards{display:block;min-width:0;width:100%}
+  .ks-ui-cards thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+  .ks-ui-cards tbody{display:block}
+  .ks-content .ks-ui-cards tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px;border-bottom:1px solid #e2e8f0;padding:18px 0;background:#fff}
+  .ks-content .ks-ui-cards tr:first-child{padding-top:6px}
+  .ks-content .ks-ui-cards tr:last-child{border-bottom:0;padding-bottom:0}
+  .ks-content .ks-ui-cards td{display:block;padding:0;border:0;min-width:0;max-width:none;white-space:normal;overflow-wrap:anywhere}
+  .ks-content .ks-ui-cards td[data-label]::before{content:attr(data-label);display:block;font-size:12px;font-weight:500;color:#475569;margin-bottom:5px}
+  .ks-content .ks-ui-cards .ks-ui-identity{grid-column:1/-1;min-width:0}
+  .ks-content .ks-ui-cards .ks-ui-identity::before{display:none}
+  .ks-content .ks-ui-cards td.ks-ui-number{text-align:left;white-space:normal}
+  .ks-content .ks-ui-cards td.ks-ui-row-action,.ks-content .ks-ui-cards td.ks-ui-row-details{grid-column:1/-1}
+  .ks-content .ks-ui-cards .ks-ui-row-action::before{display:none}
+  .ks-content .ks-ui-cards .ks-ui-action{width:100%}
+  .ks-content .ks-ui-cards tr.ks-ui-empty{display:block;padding:20px 0}
+  .ks-content .ks-ui-cards .ks-ui-empty td{text-align:center}
+  .ks-ui-status-pair{flex-direction:row;flex-wrap:wrap}
+  .ks-content .ks-ui-history summary{width:100%;border-top:1px solid #f1f5f9}
+}
+@media screen and (max-width:540px){
+  .ks-ui-report-fields{grid-template-columns:1fr}
+  .ks-content .ks-stock-filters.ks-ui-scoped-filters{grid-template-columns:1fr}
+  .ks-ui-report-fields>.ks-ui-filter-actions{display:grid;grid-template-columns:1fr auto}
+}
+@media print{
+  @page{margin:12mm}
+  .ks-workspace .ks-sidebar,.ks-workspace .ks-topbar,.ks-workspace .ks-menu-backdrop,
+  .ks-workspace .ks-skip-link,.ks-content .ks-ui-no-print{display:none!important}
+  .ks-workspace .ks-app-area{margin:0!important}
+  body.ks-workspace{background:#fff;font-size:11px}
+  .ks-content.wrap{padding:0!important;max-width:none!important}
+  .ks-content .panel,.ks-content .ks-pay-card{padding:0;margin:12px 0;border:0;border-radius:0;box-shadow:none}
+  .ks-content .tablewrap,.ks-content .ks-pay-tablewrap{overflow:visible}
+  .ks-content table,.ks-content .ks-ui-history,.ks-content .ks-pay-table{min-width:0;width:100%;font-size:10px}
+  .ks-content td,.ks-content th,.ks-content .ks-ui-cards td{padding:7px 5px;white-space:normal;overflow-wrap:anywhere}
+  .ks-content th{font-size:10px}
+  .ks-content table small{font-size:9px!important}
+  .ks-content .ks-ui-cards .ks-ui-identity{min-width:0!important}
+  .ks-content .ks-ui-history details,.ks-content .ks-ui-history details[open]{min-width:0}
+  .ks-content .ks-ui-history details dl{font-size:9px}
+  .ks-content .ks-ui-history summary{display:none}
+  .ks-content .ks-ui-badge{font-size:9px;padding:2px 4px;border:1px solid #cbd5e1}
+  .ks-content tr{break-inside:avoid}
+  .ks-content thead{display:table-header-group}
+  .ks-pay-page:has(#rincian-pembayaran) .ks-ui-payment-list{display:none!important}
+  .ks-pay-page #rincian-pembayaran .ks-pay-form{display:none!important}
+  .ks-ui-scope{border:0!important;padding:0!important}
+}

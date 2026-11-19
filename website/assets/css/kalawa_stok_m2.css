@@ -1,0 +1,52 @@
+/* Kalawa Service — Stok Bengkel TEST ONLY R01. Bekerja di atas brand merah-kuning. */
+.ks-stock {--red:#a91f29;--yellow:#f4c542;--line:#e7e2df;--muted:#667281;}
+.ks-stock [hidden] {display:none!important;}
+.ks-stock .sub{color:var(--muted);font-size:.87rem;line-height:1.5;margin:3px 0 0;}
+.ks-stock h1{font-size:1.65rem;margin:0;}
+.ks-stock h2{font-size:1.16rem;margin:0;}
+.ks-stock h3{font-size:1rem;margin:0 0 10px;}
+.ks-stock-top,.ks-stock-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.ks-stock-top{margin:8px 0 16px;}
+.ks-stock-chip{font-size:.78rem;border:1px solid #eed99d;border-radius:40px;padding:7px 11px;color:#714d09;background:#fff9e7;}
+.ks-stock .panel{margin:16px 0;padding:20px;border-color:var(--line);}
+.ks-stock-heading{margin-bottom:17px;}
+.ks-stock .ks-light{color:var(--red);background:#fff;border:1px solid #e9bec0;border-radius:9px;padding:8px 12px;text-decoration:none;font-size:.9rem;}
+.ks-stock .ks-light:hover{background:#fff6f5;}
+.ks-stock-summary{display:flex;gap:10px;margin:0 0 18px;}
+.ks-stock-summary>div{border:1px solid var(--line);background:#faf9f7;border-radius:11px;padding:11px 16px;min-width:150px;}
+.ks-stock-summary small,.ks-stock-summary strong{display:block;}
+.ks-stock-summary small{color:var(--muted);font-size:.78rem;margin-bottom:4px;}
+.ks-stock-summary strong{font-size:1.17rem;}
+.ks-stock-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 16px;}
+.ks-stock-field.full{grid-column:1/-1;}
+.ks-stock-field label{display:block;font-size:.87rem;font-weight:650;margin-bottom:7px;}
+.ks-stock-field input,.ks-stock-field select{width:100%;max-width:100%;margin:0;border-radius:9px;box-sizing:border-box;}
+.ks-stock-field small{display:block;font-size:.79rem;color:var(--muted);line-height:1.45;margin-top:5px;}
+.ks-stock-actions{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin-top:16px;}
+.ks-stock-actions span{color:var(--muted);font-size:.82rem;}
+.ks-stock-actions button,.ks-stock-filters button{border-radius:9px;cursor:pointer;}
+.ks-stock-actions button:disabled{opacity:.6;cursor:wait;}
+.ks-stock-history{border-top:1px solid var(--line);margin-top:20px;padding-top:18px;}
+.ks-stock-scroll{overflow-x:auto;}
+.ks-stock table{min-width:670px;width:100%;}
+.ks-stock table th{font-size:.83rem;white-space:nowrap;}
+.ks-stock table td{font-size:.87rem;vertical-align:middle;}
+.ks-stock table td strong{display:block;}
+.ks-stock table td small{display:block;color:var(--muted);margin-top:3px;font-size:.79rem;}
+.ks-stock-filters{display:grid;grid-template-columns:1fr 1.2fr 1fr auto;gap:10px;align-items:end;margin:0 0 12px;}
+.ks-stock-filters label{display:block;font-size:.8rem;font-weight:650;margin-bottom:6px;}
+.ks-stock-filters select,.ks-stock-filters input{width:100%;margin:0;box-sizing:border-box;border-radius:9px;}
+.ks-stock-filters .filter-action{display:flex;align-items:center;gap:8px;}
+.ks-stock-filters .filter-action a{color:var(--red);font-size:.87rem;padding:10px 4px;}
+.ks-stock-count{font-size:.83rem;color:var(--muted);margin:5px 0 12px;}
+.ks-stock-badge{display:inline-block;font-size:.78rem;font-weight:650;padding:5px 9px;border-radius:99px;white-space:nowrap;}
+.ks-stock-badge.cukup{color:#18633c;background:#e4f5ec;}
+.ks-stock-badge.rendah{color:#875800;background:#fff3ca;}
+.ks-stock-badge.habis{color:#a51f2d;background:#ffebeb;}
+.ks-stock-badge.belum{color:#49596b;background:#ecf1f5;}
+.ks-stock-link{font-size:.86rem;font-weight:650;white-space:nowrap;}
+.ks-stock input:focus-visible,.ks-stock select:focus-visible,.ks-stock button:focus-visible,.ks-stock a:focus-visible{outline:3px solid var(--yellow);outline-offset:2px;}
+@media(max-width:840px){.ks-stock-filters{grid-template-columns:repeat(2,minmax(0,1fr));}.ks-stock-filters .filter-action{grid-column:1/-1;}}
+@media(max-width:600px){.ks-stock .panel{padding:14px;}.ks-stock-grid{grid-template-columns:1fr;}.ks-stock-summary{flex-direction:column;}.ks-stock-summary>div{min-width:0;}.ks-stock-filters{grid-template-columns:1fr;}.ks-stock-filters .filter-action{grid-column:auto;}}
+
+.ks-stock [aria-invalid="true"]{border-color:#ad1f29!important;background:#fff7f7;}

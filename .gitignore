@@ -1,0 +1,46 @@
+# Actual credentials and local configuration
+kalawa-korporat-uji-config.php
+kalawa-final-t4-state.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# SQL dumps: allow only the reviewed migrations and test templates
+*.sql
+!/sql/001_korporat.sql
+!/sql/002_penerimaan_kas.sql
+!/sql/003_garansi_lunas.sql
+!/sql/004_audit_terpadu.sql
+!/uji/sql/Garansi-Pembayaran-R03.sql
+!/uji/sql/Izin-Supplier-Tambahan.sql
+!/uji/tools/izin-template.sql
+
+# Outputs may contain full backups and test credentials
+**/hasil/
+**/bukti/
+**/database/
+**/backup/
+**/backups/
+**/logs/
+**/sessions/
+*.log
+*.bak
+*.backup
+*.zip
+*.7z
+*.rar
+*.sqlite
+*.db
+*.pdf
+*.mp4
+*.mov
+HASIL-TERAKHIR.txt
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store

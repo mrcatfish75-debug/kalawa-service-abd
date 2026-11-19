@@ -1,0 +1,39 @@
+/* Login R02 · sama visual handoff, backend login/CSRF tetap dari R01. */
+body.ks-login-body{font-family:Inter,Arial,system-ui,sans-serif;background:#f8fafc;color:#111827;min-height:100vh}
+.ks-login-shell{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);min-height:100vh}
+.ks-login-left{display:flex;flex-direction:column;padding:25px clamp(25px,5vw,75px)}
+.ks-login-brand{display:flex;align-items:center;gap:13px}
+.ks-login-brand .ks-brand-logo{width:62px;height:62px;flex-basis:62px;border:1px solid #e2e8f0}
+.ks-login-brand strong{display:block;font-size:18px;line-height:1.35;letter-spacing:-.02em}
+.ks-login-brand small{display:block;color:#475569;font-size:12px;margin-top:3px}
+.ks-login-card{width:100%;max-width:440px;margin:auto;min-height:0;padding:45px 0}
+.ks-login-overline{font-size:12px;color:var(--ks-primary);font-weight:650;letter-spacing:0;margin:0 0 10px}
+.ks-login-card h1{font-size:30px;line-height:1.2;margin:0 0 12px;color:#0f172a}
+.ks-login-description{font-size:14px;line-height:1.6;color:#475569;margin:0 0 26px}
+.ks-login-card label{display:block;font-size:13px;font-weight:700;color:#1e293b;margin:0 0 7px}
+.ks-login-card input:not([type=hidden]){display:block;width:100%;min-height:46px;border:1px solid #cbd5e1;border-radius:8px;background:#fff;padding:11px 12px;font-size:14px;margin:0}
+.ks-login-card input:focus{outline:2px solid var(--ks-primary);outline-offset:2px;border-color:var(--ks-primary)}
+.ks-field-help{display:block;color:#475569;font-size:12px;line-height:1.45;margin:6px 0 18px}
+.ks-login-card button{cursor:pointer;font-family:inherit}
+.ks-password-line{position:relative}
+.ks-password-line input{padding-right:108px!important}
+.ks-password-line button{position:absolute;right:4px;top:4px;bottom:4px;padding:3px 11px;border:0;border-radius:6px;background:#f8fafc;color:#334155;font-weight:650;font-size:12px}
+.ks-password-line button:hover{background:#f1f5f9}
+.ks-login-submit{width:100%;height:46px;border:0;border-radius:8px;background:var(--ks-primary);color:white;font-size:14px;font-weight:750;margin-top:8px}
+.ks-login-submit:hover{background:var(--ks-primary-hover)}
+.ks-login-footer{font-size:12px;color:#475569;line-height:1.6;margin:21px 0 0}
+.ks-login-copyright{font-size:12px;color:#475569;margin-top:auto;padding:15px 0}
+.ks-login-card .alert.bad{background:#fef2f2;color:#991b1b;border:1px solid #fecaca;padding:12px 14px;border-radius:8px;font-size:13px;margin:0 0 18px}
+.ks-login-right{background:#981b22;color:white;display:flex;align-items:center;justify-content:center;padding:50px clamp(32px,5vw,80px);position:relative;overflow:hidden}
+.ks-login-right::after{content:"";position:absolute;bottom:0;left:0;right:0;height:5px;background:#f4c542}
+.ks-login-right-inner{max-width:480px}
+.ks-login-kicker{font-size:12px;letter-spacing:0;color:#f9dca1;font-weight:800}
+.ks-login-right h2{font-size:clamp(28px,3.4vw,43px);line-height:1.21;letter-spacing:-.03em;margin:18px 0;color:white}
+.ks-login-right p:not(.ks-login-kicker){color:#ffedf0;font-size:15px;line-height:1.6;margin:0 0 30px}
+.ks-login-feature{border-top:1px solid rgba(255,255,255,.23);padding:16px 0;display:flex;flex-direction:column;gap:4px}
+.ks-login-feature strong{font-size:14px;color:white}
+.ks-login-feature span{font-size:13px;color:#ffe4e7}
+@media(max-width:850px){.ks-login-shell{display:block}.ks-login-right{display:none}.ks-login-left{min-height:100vh;padding:18px 22px}.ks-login-card{max-width:440px;padding:55px 0 30px}.ks-login-card h1{font-size:26px}.ks-login-copyright{padding:10px 0}}
+@media(prefers-reduced-motion:reduce){*{transition-duration:0s!important}}
+
+@media(max-width:850px){.ks-login-card input:not([type=hidden]){font-size:16px}.ks-password-line button{top:1px;bottom:1px;min-height:44px}}
