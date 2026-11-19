@@ -1,32 +1,26 @@
-# Instalasi lokal
+# Instalasi dari clone
 
-## Website kelompok yang sudah berjalan
+Panduan lengkap ada pada bagian **Instalasi pada laptop Windows lain dari clone** di [README](../README.md). Urutannya: siapkan XAMPP baseline, clone repository, peroleh paket database privat, periksa, pasang, login, lalu uji.
 
-Push source tidak memerlukan pemasangan ulang, migrasi, impor database, penyalinan ke htdocs, atau perubahan password. Folder repository di D: terpisah dari website XAMPP.
+## Parameter peluncur
 
-## Komputer teman yang belum memiliki Kalawa Service
-
-1. Pasang XAMPP dan aktifkan Apache/MariaDB. Lingkungan kelompok memakai PHP 8.2.12 dan MariaDB 10.4.32.
-2. Download/clone repository untuk membaca source. Untuk pemasangan yang langsung dapat login, minta paket **KALAWA_T4_SIAP_PASANG** melalui saluran privat kelompok.
-3. Ekstrak paket lengkap di luar htdocs, misalnya `D:\KALAWA_T4_SIAP_PASANG`. Paket lengkap memiliki folder `database/` dan skrip `Pasang-Baru-T4.ps1`.
-4. Buka PowerShell dari folder **paket lengkap**, lalu jalankan:
+| Parameter | Nilai bawaan/kegunaan |
+|---|---|
+| `-PaketFinal` | Wajib: folder paket lengkap yang memuat MANIFEST-PAKET.json dan database |
+| `-Target` | C:\xampp\htdocs\kalawa-service-f1-korporat-uji |
+| `-Php` | C:\xampp\php\php.exe |
+| `-Port` | 3306, port MariaDB |
+| `-AdminUser` | root, akun admin MariaDB lokal |
+| `-DenganPassword` | Minta password admin secara tersembunyi |
+| `-Pasang` | Lakukan pemasangan; tanpa switch ini hanya pemeriksaan |
 
 ```powershell
-Set-Location D:\KALAWA_T4_SIAP_PASANG
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Baru-T4.ps1
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Baru-T4.ps1 -Pasang
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Uji-Final-T4.ps1 -Jalankan
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Dari-Clone.ps1 -PaketFinal 'D:\KALAWA_T4_SIAP_PASANG'
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Dari-Clone.ps1 -PaketFinal 'D:\KALAWA_T4_SIAP_PASANG' -Pasang
 ```
 
-5. Gunakan `-DenganPassword` jika admin MariaDB berpassword. Untuk lokasi XAMPP/port berbeda, baca opsi `-Target`, `-Php` dan `-Port` pada paket lengkap. Nama folder target website tetap `kalawa-service-f1-korporat-uji`.
-6. Buka `http://localhost/kalawa-service-f1-korporat-uji/login.php`. Gunakan akun aplikasi yang dibagikan kelompok secara privat. Password aplikasi berbeda dari password admin MariaDB dan password koneksi baru.
+Peluncur memeriksa 66 source dan 123 berkas paket, lalu menggunakan installer final di paket tersebut. Source yang diinstal dari paket sama dengan clone. Tujuan harus kosong dan nama folder situs tetap mengikuti pengaman R05.
 
-Installer hanya untuk tujuan kosong. Ia menolak database, akun koneksi, folder website atau konfigurasi yang sudah ada. Jangan menghapus instalasi/data lama untuk melewati penolakan.
+Password aplikasi dipertahankan dari backup dan dibagikan privat. Installer membuat password SQL service user baru dan menyimpan konfigurasi di luar htdocs.
 
-Dump final sudah memuat struktur, data dan objek. Jangan mengulang migrasi 001–004 setelah memasang dump final.
-
-## Batas
-
-Repository source tidak menyediakan skema baseline lengkap atau seed demo login. Jalur pemasangan ulang yang sudah diuji adalah paket final privat. Jika diperlukan demo publik, buat dan uji skema/seed sintetis terpisah; jangan mempublikasikan backup asli.
-
-GitHub Pages tidak menjalankan PHP/MariaDB. URL repository adalah lokasi source, bukan alamat aplikasi yang langsung dapat dipakai.
+Pada laptop pemilik yang sudah menjalankan Kalawa, gunakan pemeriksa final untuk membandingkan source, bukan peluncur pemasangan ulang.

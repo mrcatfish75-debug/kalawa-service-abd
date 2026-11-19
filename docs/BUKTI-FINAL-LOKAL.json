@@ -1,0 +1,33 @@
+{
+    "format":  "KALAWA_FINAL_GITHUB_R02",
+    "status":  "PASS",
+    "checked_at_wib":  "2026-11-19T14:14:42+07:00",
+    "repository":  "https://github.com/mrcatfish75-debug/kalawa-service-abd.git",
+    "remote_commit_checked":  "dd5819c756172b0903c18dad882e61517e5f282a",
+    "source_tree":  "5c357ae7ead27e3d5d28231135d8559696c56756",
+    "source_version":  "CETAK_R05",
+    "application_files":  66,
+    "htdocs_path":  "C:\\xampp\\htdocs\\kalawa-service-f1-korporat-uji",
+    "source_github_equals_htdocs":  true,
+    "migrations_verified":  4,
+    "backup":  {
+                   "path":  "D:\\KALAWA_CETAK_R05\\hasil\\paket_20261117_195957_189\\KALAWA_T4_SIAP_PASANG",
+                   "manifest_files_verified":  123,
+                   "portable_dump":  "D:\\KALAWA_CETAK_R05\\hasil\\paket_20261117_195957_189\\KALAWA_T4_SIAP_PASANG\\database\\kalawa-final.sql",
+                   "portable_sha256":  "5f79a38084f520515a698c81719b2bdcdd053bde7c882eaebe51c98573210e1a",
+                   "original_dump":  "D:\\KALAWA_CETAK_R05\\hasil\\paket_20261117_195957_189\\KALAWA_T4_SIAP_PASANG\\database\\backup-asli.sql",
+                   "original_sha256":  "00e7ba0e347dbab0c7e8015be74d1a5550d288eb653ff532d9218a927007040d",
+                   "restore_status":  "PASS",
+                   "restore_verified_at":  "2026-11-17T20:00:01+07:00",
+                   "table_count":  26,
+                   "object_count":  38,
+                   "historical_tests":  {
+                                            "PASS":  442,
+                                            "FAIL":  0,
+                                            "BLOCKED":  0,
+                                            "rerun":  false
+                                        }
+               },
+    "live_database_queried":  false,
+    "note":  "Verifikasi source/arsip; hasil 442 dan restore berasal dari snapshot paket. Tidak menjalankan ulang transaksi atau mengklaim backup sama dengan data live hari ini."
+}

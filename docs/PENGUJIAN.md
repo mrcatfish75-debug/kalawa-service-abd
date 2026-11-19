@@ -1,26 +1,40 @@
-# Pengujian
+# Pengujian dan cakupan bukti
 
-Bukti R05 yang disampaikan kelompok telah menunjukkan **442 PASS, 0 FAIL, 0 BLOCKED**, dengan source 66 berkas. Hasil rinci dan backup recovery disimpan terpisah karena dapat memuat data/kredensial salinan uji.
-
-`docs/VALIDASI-PAKET.md` mempertahankan catatan pemeriksaan R05 sebelumnya, lingkungan pemeriksa dan batas cakupannya. Persiapan GitHub memeriksa kemasan, byte source/migrasi/alat uji serta perilaku checkout Git. Persiapan ini tidak mengulang 442 transaksi aplikasi.
-
-Sebelum commit:
+## Pemeriksaan repository
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Periksa-Repo.ps1
 ```
 
-Pemeriksaan mencakup 66 hash, jumlah source, empat migrasi, nama/path berkas privat yang lazim, serta SQL di luar template yang ditinjau. Ini tidak menjamin mendeteksi semua rahasia baru yang mungkin ditambahkan kemudian; tetap baca perubahan sebelum commit.
+Memeriksa 66 hash source, migrasi yang tersedia serta nama/path berkas privat yang lazim. Pemeriksaan ini bukan pemindai rahasia lengkap.
 
-Untuk website XAMPP R05 yang telah terpasang, nyalakan Apache/MariaDB dan jalankan dari root repository:
+## Kesamaan source GitHub dengan htdocs
+
+Pada laptop pemilik:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Periksa-Final-Lokal.ps1 -PaketFinal 'D:\KALAWA_T4_SIAP_PASANG' -SimpanBukti
+```
+
+Gunakan path paket yang sebenarnya. Alat fetch origin/main, mensyaratkan HEAD cocok dengan remote, membandingkan blob Git dengan 66 berkas htdocs, memeriksa SHA-256 source/migrasi dan 123 berkas paket final. Source runtime tambahan di htdocs di luar manifest dihentikan untuk ditinjau; folder metadata pengembangan seperti .git/.agents tidak dianggap source aplikasi.
+
+Metadata ditulis ke BUKTI-FINAL-LOKAL.json dan BUKTI-BACKUP.md. Alat tidak membaca konfigurasi berpassword atau database live. Ia tidak mengklaim data live sama dengan snapshot backup 17 November.
+
+Setelah commit/push, jalankan ulang tanpa -SimpanBukti agar working tree tetap bersih. Commit dokumentasi berikutnya dapat berbeda dari commit yang tercatat pada bukti; hash tree website tetap sama bila source tidak diubah.
+
+## Uji transaksi dan recovery
+
+Pada website XAMPP yang sudah terpasang:
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Uji-Final-T4.ps1
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Uji-Final-T4.ps1 -Jalankan -HasilRoot D:\KALAWA_HASIL_UJI_GITHUB
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Uji-Final-T4.ps1 -Jalankan -HasilRoot 'D:\KALAWA_HASIL_UJI'
 ```
 
-Tambahkan `-DenganPassword` untuk admin MariaDB berpassword. Hindari transaksi pengguna lain selama snapshot diuji. Suite membuat salinan database/website serta fixture; tidak mereset password akun asli. Hasil disimpan di `D:\KALAWA_HASIL_UJI_GITHUB`, di luar repo.
+Gunakan -DenganPassword jika admin MariaDB berpassword dan sesuaikan -Target/-Php untuk lokasi XAMPP lain. Hasil uji disimpan di luar repo karena dapat berisi backup dan kredensial salinan.
 
-Cakupan enam role, cabang/penugasan, CRUD, WO, stok, status, pembayaran, korporat, laporan, audit, kasus negatif dan recovery dijelaskan di `uji/CAKUPAN-DAN-ROLE.md`. Hasil lulus memerlukan FAIL=0 dan BLOCKED=0.
+Suite memakai salinan database/website, fixture sintetis, enam role, kasus negatif, kontrol cabang/penugasan, CRUD, WO, stok, status, pembayaran, korporat, laporan, audit dan recovery. Lihat [cakupan](../uji/CAKUPAN-DAN-ROLE.md). Hindari transaksi pengguna lain selama snapshot diuji.
 
-Pemeriksaan browser/cetak tetap mengikuti checklist di `docs/`. CLI tidak menggantikan pengujian Apache/browser atau menguji setiap kemungkinan input/perangkat.
+Bukti pada paket final R05 menunjukkan 442 PASS, 0 FAIL, 0 BLOCKED. Bukti restore full export/import mencakup 26 tabel dan 38 objek SQL dengan baris/hash identik. Persiapan GitHub tidak mengulang 442 transaksi atau menjalankan ulang restore database.
+
+Catatan validasi patch sebelumnya dipertahankan pada VALIDASI-PAKET.md. Browser/cetak tetap mengikuti checklist; CLI tidak menguji setiap input, perangkat atau printer fisik.
