@@ -15,6 +15,7 @@ kalawa-final-t4-state.json
 !/sql/002_penerimaan_kas.sql
 !/sql/003_garansi_lunas.sql
 !/sql/004_audit_terpadu.sql
+!/demo/schema.sql
 !/uji/sql/Garansi-Pembayaran-R03.sql
 !/uji/sql/Izin-Supplier-Tambahan.sql
 !/uji/tools/izin-template.sql

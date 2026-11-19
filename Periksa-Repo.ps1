@@ -35,7 +35,7 @@ foreach ($name in $migrations) {
     }
 }
 $allowedSql = @('sql/001_korporat.sql','sql/002_penerimaan_kas.sql','sql/003_garansi_lunas.sql','sql/004_audit_terpadu.sql',
-    'uji/sql/Garansi-Pembayaran-R03.sql','uji/sql/Izin-Supplier-Tambahan.sql','uji/tools/izin-template.sql')
+    'uji/sql/Garansi-Pembayaran-R03.sql','uji/sql/Izin-Supplier-Tambahan.sql','uji/tools/izin-template.sql', 'demo/schema.sql')
 $all = @(Get-ChildItem -LiteralPath $repoRoot -Recurse -File -Force | Where-Object { $_.FullName -notmatch '[\\/]\.git[\\/]' })
 foreach ($file in $all) {
     $relative = $file.FullName.Substring($repoRoot.Length + 1).Replace('\','/')
@@ -52,3 +52,22 @@ Write-Output 'PASS: 66 berkas aplikasi identik dengan manifest CETAK_R05.'
 Write-Output 'PASS: 4 migrasi utama tersedia; SQL tambahan hanya template uji yang ditinjau.'
 Write-Output 'PASS: Tidak ditemukan nama/path berkas privat yang dilarang.'
 Write-Output 'Pemeriksaan ini tidak menjalankan transaksi aplikasi dan tidak mendeteksi semua kemungkinan rahasia baru.'
+
+$demoManifestPath=Join-Path $repoRoot 'demo/manifest-demo.json'
+if(-not(Test-Path -LiteralPath $demoManifestPath -PathType Leaf)){throw 'Manifest demo publik tidak ditemukan.'}
+if(Test-Path -LiteralPath $demoManifestPath -PathType Leaf){
+    $demo=Get-Content -LiteralPath $demoManifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    if($demo.format -ne 'KALAWA_DEMO_PUBLIK_R03' -or $demo.application_version -ne 'CETAK_R05'){
+        throw 'Manifest demo publik tidak sesuai.'
+    }
+    foreach($entry in $demo.files.PSObject.Properties){
+        $relative=[string]$entry.Name
+        if($relative -match '(^|/)\.\.(/|$)|^[\\/]|^[A-Za-z]:|\\'){throw 'Path manifest demo tidak sah.'}
+        $file=Join-Path $repoRoot $relative
+        if(-not(Test-Path -LiteralPath $file -PathType Leaf)){throw ('Berkas demo hilang: '+$relative)}
+        if((Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash -ine [string]$entry.Value){
+            throw ('Berkas demo berubah: '+$relative)
+        }
+    }
+    Write-Output 'PASS: Schema dan alat instalasi demo publik sesuai manifest.'
+}

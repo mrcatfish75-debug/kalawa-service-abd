@@ -38,3 +38,10 @@ Suite memakai salinan database/website, fixture sintetis, enam role, kasus negat
 Bukti pada paket final R05 menunjukkan 442 PASS, 0 FAIL, 0 BLOCKED. Bukti restore full export/import mencakup 26 tabel dan 38 objek SQL dengan baris/hash identik. Persiapan GitHub tidak mengulang 442 transaksi atau menjalankan ulang restore database.
 
 Catatan validasi patch sebelumnya dipertahankan pada VALIDASI-PAKET.md. Browser/cetak tetap mengikuti checklist; CLI tidak menguji setiap input, perangkat atau printer fisik.
+
+
+## Demo publik R03
+
+Demo telah dipasang nyata pada MariaDB 10.4.32, PHP 8.4.27 dan PowerShell 7.4.19 di Linux terisolasi. Sebelas akun demo login melalui HTTP ke halaman role yang benar. Suite yang sama menghasilkan 442 PASS, 0 FAIL, 0 BLOCKED pada data fiktif. Pemasangan ulang ditolak dan source/config tetap utuh.
+
+Lingkungan uji PHP memakai buffering/session/timezone yang sesuai baseline XAMPP. Pemeriksaan ini tidak menggantikan eksekusi Windows/Apache di laptop teman. Source aplikasi 66 berkas tidak diubah. Rincian ada pada VALIDASI-DEMO-R03.md.

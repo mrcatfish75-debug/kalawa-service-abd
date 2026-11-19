@@ -2,248 +2,179 @@
 
 # Kalawa Service
 
-Sistem operasional bengkel multi-cabang untuk proyek **Administrasi Basis Data (ABD) — Tugas 4**, yang melanjutkan database, aturan bisnis, dan administrasi pada Tugas 1–3.
+Sistem operasional bengkel multi-cabang untuk proyek **Administrasi Basis Data — Tugas 4**, melanjutkan database dan aturan bisnis Tugas 1–3.
 
-**Versi aplikasi: CETAK_R05 — 66 berkas source.** Persiapan GitHub R02 menambahkan dokumentasi, pemeriksaan kesamaan source dan peluncur instalasi. Source website, migrasi SQL, serta alur transaksi R05 dipertahankan.
+**Aplikasi final CETAK_R05 · 66 berkas source · Demo publik R03**
 
-## Berkas pengumpulan Tugas 4
+Repository menyediakan source final yang sama dengan website kelompok serta schema dan data contoh fiktif untuk mencoba aplikasi pada laptop lain. Demo dapat dipasang dari Download ZIP atau clone, tanpa memperoleh backup privat kelompok.
 
-| Instruksi | Berkas atau bukti |
-|---|---|
-| Source aplikasi atau link repository | [Repository Kalawa Service](https://github.com/mrcatfish75-debug/kalawa-service-abd) dan folder [website](website/) |
-| Script migrasi perubahan requirement | Empat skrip pada [sql](sql/), dijelaskan pada [riwayat migrasi](docs/RIWAYAT-MIGRASI.md) |
-| File backup atau bukti lokasi backup | [Bukti lokasi backup dan SHA-256](docs/BUKTI-BACKUP.md), dilengkapi [hasil pemeriksaan lokal](docs/BUKTI-FINAL-LOKAL.json) |
+## Mulai cepat — Windows dan XAMPP
 
-Bukti lokasi dibuat setelah source Git yang di-fetch dari GitHub cocok dengan source repository dan folder htdocs, serta paket backup lolos pemeriksaan hash. SQL backup disimpan privat oleh kelompok dan dapat diserahkan melalui kanal pengumpulan resmi.
+### 1. Siapkan XAMPP
 
-Laporan PDF, video 10–15 menit, logbook, nama/NIM anggota dan pengumpulan oleh perwakilan tetap dilengkapi sesuai instruksi dosen. Lihat [pemetaan pengumpulan](docs/PENGUMPULAN-T4.md).
+Baseline kelompok: **XAMPP 8.2.12, PHP 8.2.12, MariaDB 10.4.32**. Demo juga telah diuji pada PHP 8.4.27 dengan MariaDB 10.4.32. Unduh baseline melalui [arsip resmi XAMPP](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/) atau lihat [Apache Friends](https://www.apachefriends.org/download.html).
 
-## Fitur dan pembagian role
+Aktifkan **Apache** dan **MySQL/MariaDB** melalui XAMPP Control Panel. Contoh lokasi adalah `C:\xampp`. PDO MySQL harus tersedia dan folder htdocs dapat ditulis.
 
-| Role | Tugas utama |
-|---|---|
-| Owner | Pengelolaan seluruh cabang, lima master CRUD, WO, stok, pembayaran, kontrak/tagihan korporat, laporan dan audit |
-| Admin Cabang | Pendaftaran pelanggan/motor, WO dan penugasan mekanik di cabangnya, status pekerjaan, laporan cabang |
-| Kasir | Pembayaran WO selesai, rincian jasa/barang, bukti pembayaran dan tagihan korporat sesuai batas cabang |
-| Mekanik | Pekerjaan yang ditugaskan; mekanik utama menjalankan Menunggu → Proses → Selesai; pembantu membaca rincian |
-| Petugas Gudang | Persediaan dan mutasi stok cabang, katalog, laporan pemakaian barang dan stok minimum |
-| Auditor | Membaca laporan lintas cabang, rincian servis dan jejak audit |
+### 2. Download atau clone
 
-Fitur mencakup CRUD pelanggan, motor, jasa servis, suku cadang dan supplier; WO beserta jasa/barang; pembayaran; pelanggan korporat; kontrak/plafon kredit; tagihan kolektif bulanan; serta empat laporan JOIN. Pembatasan role, cabang, penugasan dan status diperiksa di backend. Rincian hak akses ada di [cakupan enam role](uji/CAKUPAN-DAN-ROLE.md).
+Pilihan Download ZIP tidak memerlukan Git:
 
-Status finansial **LUNAS** berbeda dari status pekerjaan **SELESAI**. Kasir menerima pelunasan setelah pekerjaan memenuhi aturan. Cetak mencakup laporan, rincian servis, bukti pembayaran dan dokumen korporat sesuai izin.
+1. Buka [repository](https://github.com/mrcatfish75-debug/kalawa-service-abd).
+2. Pilih **Code → Download ZIP**.
+3. Ekstrak ke D: sehingga tersedia `D:\kalawa-service-abd-main\Pasang-Demo.ps1`.
 
-## Teknologi dan struktur
-
-PHP/PDO MySQL, MariaDB, HTML/CSS dan JavaScript. Tidak ada tahap npm atau Composer pada versi ini.
-
-| Lokasi | Kegunaan |
-|---|---|
-| `website/` | 66 berkas aplikasi, logo, CSS dan JavaScript |
-| `sql/` | Empat migrasi historis |
-| `uji/` | Suite pengujian, fixture salinan dan pembersihan salinan uji |
-| `tools/` | Fungsi pendukung pengujian dan verifikasi GitHub |
-| `docs/` | Instalasi, requirement, migrasi, pengujian, bukti backup dan panduan pengumpulan |
-| `Pasang-Dari-Clone.ps1` | Memeriksa clone + paket privat lalu memanggil installer final yang sudah ada |
-| `Periksa-Final-Lokal.ps1` | Mencocokkan GitHub, repository, htdocs dan arsip backup |
-| `Periksa-Repo.ps1` | Memeriksa source dan berkas repository sebelum commit |
-| `konfigurasi-contoh.php` | Contoh konfigurasi tanpa password koneksi aktual |
-
-## Instalasi pada laptop Windows lain dari clone
-
-### 1. Siapkan lingkungan
-
-Gunakan lingkungan yang sama dengan laptop kelompok untuk reproduksi tugas:
-
-- Windows dan Windows PowerShell 5.1.
-- Git for Windows, dengan Git Credential Manager.
-- **XAMPP Windows 8.2.12, PHP 8.2.12 dan MariaDB 10.4.32** sebagai baseline kelompok.
-- PHP CLI dan ekstensi PDO MySQL tersedia.
-
-Unduh Git dari [situs Git](https://git-scm.com/install/windows). Arsip XAMPP baseline tersedia pada [proyek resmi XAMPP di SourceForge](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/). [Halaman Apache Friends](https://www.apachefriends.org/download.html) menyediakan versi lain; hasil pengujian baseline tidak otomatis berlaku untuk versi MariaDB yang berbeda.
-
-Contoh lokasi instalasi adalah `C:\xampp`. Aktifkan **Apache** dan **MySQL/MariaDB** melalui XAMPP Control Panel. Dari PowerShell:
-
-```powershell
-git --version
-& 'C:\xampp\php\php.exe' -v
-& 'C:\xampp\mysql\bin\mysql.exe' --version
-& 'C:\xampp\php\php.exe' -m | Select-String -Pattern 'PDO|pdo_mysql'
-```
-
-Pemasangan ditujukan untuk XAMPP baru/tujuan kosong. Installer menolak jika folder website, konfigurasi, database final atau akun koneksi yang sama sudah ada.
-
-### 2. Dapatkan akses repository dan clone
-
-Jika repository Private, pemilik mengundang akun GitHub anggota/penguji melalui Settings → Collaborators. Terima undangan menggunakan akunmu.
-
-Jalankan:
+Alternatif melalui Git:
 
 ```powershell
 Set-Location D:\
 git clone https://github.com/mrcatfish75-debug/kalawa-service-abd.git
-Set-Location D:\kalawa-service-abd
+```
+
+Jika memakai clone, foldernya `D:\kalawa-service-abd`. Jika laptop tidak mempunyai D:, gunakan folder pada drive yang tersedia dan sesuaikan path contoh.
+
+### 3. Periksa paket dan tujuan
+
+Untuk hasil Download ZIP:
+
+```powershell
+Set-Location D:\kalawa-service-abd-main
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Periksa-Repo.ps1
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Demo.ps1
 ```
 
-Jika Git meminta login, gunakan akun GitHub yang diberi akses. Autentikasi browser/Git Credential Manager terpisah dari akun login Kalawa. Hasil pemeriksaan repository harus PASS.
+Gunakan folder `D:\kalawa-service-abd` jika memakai clone. Pemeriksaan harus PASS dan menampilkan **DEMO VALID**.
 
-### 3. Dapatkan paket database final secara privat
+Installer hanya untuk tujuan baru/kosong. Jika Kalawa dengan identifier yang sama sudah ada di XAMPP, pemeriksaan berhenti dan mempertahankan instalasi tersebut.
 
-Clone berisi source dan migrasi. Untuk memperoleh struktur database, objek SQL, data dan akun aplikasi yang sama dengan demonstrasi kelompok, mintalah paket lengkap **KALAWA_T4_SIAP_PASANG** kepada pemilik proyek. Lokasi arsip dan hash dapat dicocokkan dengan [bukti backup](docs/BUKTI-BACKUP.md).
-
-Ekstrak di luar repository dan htdocs, misalnya:
-
-`D:\KALAWA_T4_SIAP_PASANG`
-
-Folder tersebut harus berisi:
-
-- `MANIFEST-PAKET.json`.
-- `database\kalawa-final.sql`, `database\backup-asli.sql` dan `database\fingerprint.json`.
-- `website`, `tools`, `uji` dan `bukti`.
-- `Pasang-Baru-T4.ps1`.
-
-Periksa lokasi ekstraksi:
+### 4. Pasang
 
 ```powershell
-Test-Path 'D:\KALAWA_T4_SIAP_PASANG\MANIFEST-PAKET.json'
-Test-Path 'D:\KALAWA_T4_SIAP_PASANG\database\kalawa-final.sql'
-Test-Path 'D:\KALAWA_T4_SIAP_PASANG\Pasang-Baru-T4.ps1'
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Demo.ps1 -Pasang
 ```
 
-Ketiganya harus True. Jika ada folder ganda setelah ekstraksi, gunakan path folder terdalam yang benar pada parameter `-PaketFinal`.
-
-Paket yang dipakai adalah snapshot R05 yang dirujuk oleh provenance. Peluncur memeriksa 123 berkas paket, 66 source, migrasi, bukti 442 pengujian dan bukti restore. Empat migrasi historis saja tidak dapat membangun database kosong.
-
-### 4. Jalankan pemeriksaan instalasi
-
-Dari folder clone:
+Jika akun admin MariaDB mempunyai password, tambahkan `-DenganPassword` pada pemeriksaan maupun pemasangan:
 
 ```powershell
-Set-Location D:\kalawa-service-abd
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Dari-Clone.ps1 -PaketFinal 'D:\KALAWA_T4_SIAP_PASANG'
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Demo.ps1 -DenganPassword -Pasang
 ```
 
-Ini memeriksa kecocokan clone/backup dan kesiapan tujuan. Jika admin MariaDB memakai password, tambahkan `-DenganPassword`. Password diminta secara tersembunyi; jangan menuliskannya pada argumen perintah.
+Password admin diminta secara tersembunyi. Installer membuat database, 26 tabel, 38 objek SQL total, data fiktif, akun aplikasi demo, akun koneksi berizin terbatas dengan password acak, konfigurasi di luar htdocs dan 66 berkas aplikasi.
 
-### 5. Pasang database dan aplikasi
+Tidak diperlukan Composer, npm, impor SQL manual, ataupun eksekusi migrasi historis saat memasang demo.
 
-Setelah pemeriksaan berhasil:
+### 5. Buka aplikasi dan login
 
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Dari-Clone.ps1 -PaketFinal 'D:\KALAWA_T4_SIAP_PASANG' -Pasang
-```
-
-Untuk admin MariaDB berpassword:
-
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Dari-Clone.ps1 -PaketFinal 'D:\KALAWA_T4_SIAP_PASANG' -DenganPassword -Pasang
-```
-
-Peluncur menggunakan installer final yang sudah ada di paket privat. Installer membuat database, mengimpor dump portabel, memeriksa fingerprint data/objek, membuat akun koneksi berizin terbatas, menulis konfigurasi di luar htdocs dengan password koneksi acak, dan menyalin source ke website. Pemeriksaan sesudah pemasangan memastikan 66 berkas terpasang sama dengan clone.
-
-Tujuan bawaan:
-
-| Komponen | Lokasi/nilai |
-|---|---|
-| Website | `C:\xampp\htdocs\kalawa-service-f1-korporat-uji` |
-| Konfigurasi privat | `C:\xampp\kalawa-korporat-uji-config.php` |
-| Database | `kalawa_service_f1_g1_clone_20261110_174035_33f8f960` |
-| SQL service user | `ks_korp_uji_33f8f960@127.0.0.1` |
-| Port MariaDB | 3306 |
-
-Nama repository dan nama folder website memang berbeda. Identifier database, user koneksi serta path sesi masih terikat pada pengaman R05, sehingga dipertahankan.
-
-Jika XAMPP berada di D: dan MariaDB memakai port 3307, gunakan parameter yang sama pada pemeriksaan dan pemasangan:
-
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Dari-Clone.ps1 -PaketFinal 'D:\KALAWA_T4_SIAP_PASANG' -Target 'D:\xampp\htdocs\kalawa-service-f1-korporat-uji' -Php 'D:\xampp\php\php.exe' -Port 3307
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Dari-Clone.ps1 -PaketFinal 'D:\KALAWA_T4_SIAP_PASANG' -Target 'D:\xampp\htdocs\kalawa-service-f1-korporat-uji' -Php 'D:\xampp\php\php.exe' -Port 3307 -Pasang
-```
-
-### 6. Buka aplikasi dan login
-
-Buka:
+URL:
 
 `http://localhost/kalawa-service-f1-korporat-uji/login.php`
 
-Jika Apache memakai port lain, tambahkan port Apache pada URL, misalnya `http://localhost:8080/kalawa-service-f1-korporat-uji/login.php`.
+**Password semua akun demo: `123456781234`**
 
-Minta username/password aplikasi kepada pemilik proyek melalui saluran privat. Installer mempertahankan akun aplikasi dari backup. Password aplikasi, password admin MariaDB dan password SQL service user merupakan tiga kredensial berbeda. Tidak ada reset password akun aplikasi dalam persiapan GitHub.
+| Role | Username | Cakupan |
+|---|---|---|
+| Owner | `owner_demo` | Seluruh cabang |
+| Admin Cabang | `admin_demo` | CBG001 |
+| Kasir | `kasir_demo` | CBG001 |
+| Mekanik utama | `mekanik_demo` | Pekerjaan yang ditugaskan di CBG001 |
+| Petugas Gudang | `gudang_demo` | CBG001 |
+| Auditor | `auditor_demo` | Laporan/audit seluruh cabang |
 
-### 7. Uji hasil pemasangan
+Akun tambahan: `pembantu_demo` untuk mekanik pembantu, serta `admin2_demo`, `kasir2_demo`, `mekanik2_demo` dan `gudang2_demo` untuk CBG002. Passwordnya sama. Gunakan menu Keluar saat berpindah akun. Semua identitas tersebut merupakan akun baru untuk demo lokal.
 
-Jalankan dari folder clone:
+### 6. Coba alur fitur
+
+| Akun | Contoh yang bisa dicoba |
+|---|---|
+| Owner | Lima master CRUD, kontrak/plafon, tagihan lintas cabang, laporan dan audit |
+| Admin Cabang | Pendaftaran pelanggan/motor, WO, jasa/barang dan mekanik pembantu |
+| Mekanik | Pilih WO Menunggu, jalankan Proses lalu Selesai sesuai aturan |
+| Kasir | Lihat WO selesai belum lunas; untuk bukti pilih filter Sudah lunas → Lihat bukti |
+| Gudang | Cari barang, catat barang masuk/koreksi dan lihat stok di bawah minimum |
+| Auditor | Telusuri empat laporan JOIN dan jejak transaksi lintas cabang |
+
+Data awal memuat 4 cabang, 5 pelanggan/perusahaan, 12 motor, 13 WO dengan beberapa status, pembayaran, stok, kontrak serta tagihan korporat. Tanggal demo mengikuti tanggal database saat pemasangan.
+
+### 7. Uji otomatis
+
+Dari folder hasil ekstraksi/clone:
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Uji-Final-T4.ps1
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Uji-Final-T4.ps1 -Jalankan -HasilRoot 'D:\KALAWA_HASIL_UJI'
 ```
 
-Tambahkan `-DenganPassword` jika admin MariaDB berpassword. Jika XAMPP berada di D:, tambahkan `-Target 'D:\xampp\htdocs\kalawa-service-f1-korporat-uji' -Php 'D:\xampp\php\php.exe'`. Port pengujian dibaca dari konfigurasi situs yang ditulis installer.
+Tambahkan `-DenganPassword` bila admin MariaDB berpassword. Suite membuat salinan terisolasi. Hasil lengkap yang telah diperiksa pada demo: **442 PASS, 0 FAIL, 0 BLOCKED**. Berkas hasil disimpan di luar repository.
 
-Suite membuat salinan terisolasi. Hasil yang diharapkan pada baseline lengkap adalah **442 PASS, 0 FAIL, 0 BLOCKED**. Baca `ringkasan.md` pada folder hasil, lalu periksa login tiap role dan cetak melalui [checklist browser](docs/CHECKLIST-BROWSER-DAN-CETAK.md).
+## Lokasi XAMPP atau port berbeda
 
-Folder hasil dapat memuat backup dan kredensial salinan uji; simpan di luar repository. Lihat [pengujian](docs/PENGUJIAN.md).
-
-## Pemeriksaan final di laptop pemilik proyek
-
-Untuk membuktikan source GitHub sama dengan website htdocs dan paket backup:
+Gunakan parameter yang sama saat memeriksa dan memasang. Contoh:
 
 ```powershell
-Set-Location D:\KALAWA_GITHUB_R01\repository
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Periksa-Final-Lokal.ps1 -PaketFinal 'D:\KALAWA_CETAK_R05\hasil\paket_20261117_195957_189\KALAWA_T4_SIAP_PASANG' -SimpanBukti
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Demo.ps1 -Target 'D:\xampp\htdocs\kalawa-service-f1-korporat-uji' -Php 'D:\xampp\php\php.exe' -Port 3307
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Demo.ps1 -Target 'D:\xampp\htdocs\kalawa-service-f1-korporat-uji' -Php 'D:\xampp\php\php.exe' -Port 3307 -Pasang
 ```
 
-Alat melakukan fetch origin/main, membandingkan blob Git dengan source htdocs, memeriksa empat migrasi dan keutuhan paket backup, lalu menulis `docs/BUKTI-FINAL-LOKAL.json` serta `docs/BUKTI-BACKUP.md`. Isi bukti hanya metadata/path/hash dan hasil verifikasi, tanpa baris data pelanggan atau password.
+Untuk uji otomatis, sesuaikan `-Target` dan `-Php`. Port uji dibaca dari konfigurasi yang dibuat installer. Jika Apache memakai 8080, URL menjadi `http://localhost:8080/kalawa-service-f1-korporat-uji/login.php`.
 
-Pemeriksaan ini tidak menjalankan ulang transaksi, mengakses database live, atau menyatakan snapshot backup sama dengan data live hari ini. Source aktif tambahan di luar manifest dihentikan untuk ditinjau; alat tidak menghapusnya.
+Nama folder website, database dan user koneksi dipertahankan agar sesuai pengaman R05. Nama folder repository boleh berbeda.
 
-Setelah bukti/dokumentasi di-commit dan di-push, ulangi pemeriksaan **tanpa** `-SimpanBukti` agar hasilnya tidak mengubah working tree. Commit dokumentasi dapat berubah sementara tree source website tetap sama.
-
-## Migrasi perubahan requirement
-
-| Skrip | Isi |
+| Komponen bawaan | Lokasi |
 |---|---|
-| [001_korporat.sql](sql/001_korporat.sql) | Profil pelanggan korporat, kontrak, relasi WO, tagihan bulanan dan rincian kolektif |
-| [002_penerimaan_kas.sql](sql/002_penerimaan_kas.sql) | Penerimaan pembayaran individual/korporat dan pengisian baseline |
-| [003_garansi_lunas.sql](sql/003_garansi_lunas.sql) | Penyesuaian fungsi garansi agar selesai dan lunas menjadi prasyarat |
-| [004_audit_terpadu.sql](sql/004_audit_terpadu.sql) | View audit transaksi terpadu |
+| Website | `C:\xampp\htdocs\kalawa-service-f1-korporat-uji` |
+| Konfigurasi privat | `C:\xampp\kalawa-korporat-uji-config.php` |
+| Database | `kalawa_service_f1_g1_clone_20261110_174035_33f8f960` |
 
-Migrasi merupakan riwayat perubahan Tugas 1–3 menuju Tugas 4. Dump final sudah memuat perubahan tersebut; pemasangan dari dump tidak memerlukan pengulangan migrasi. Tabel/constraint/view/procedure/function/trigger terdokumentasi melalui source SQL dan arsip final. Dump database tidak mengekspor seluruh user/role global server; installer membuat akun koneksi aplikasi yang diperlukan.
+## Fitur dan hak akses
 
-## Backup dan recovery
+Login enam role; CRUD pelanggan, motor, jasa servis, suku cadang dan supplier; WO dan rinciannya; penugasan mekanik utama/pembantu; persediaan; pembayaran; kontrak/plafon dan tagihan korporat; empat laporan JOIN; audit serta cetak dokumen.
 
-Strategi arsip final adalah **full logical SQL dump** setelah data uji tersedia. Ada dump portabel untuk pemasangan ulang dan dump asli untuk arsip. Backup juga memuat fingerprint data dan objek, serta bukti pemulihan.
+Hak role/cabang/penugasan dan status diperiksa di backend. Mekanik pembantu membaca rincian; pengubahan status dilakukan mekanik utama yang ditugaskan. Gudang tidak mengelola pembayaran. Status pekerjaan **SELESAI** dan status finansial **LUNAS** dicatat terpisah. Lihat [matriks role](uji/CAKUPAN-DAN-ROLE.md).
 
-Snapshot paket dibuat pada **17 November 2026, 20:00:02 WIB**. Bukti full export/import ke database baru menunjukkan PASS dengan **26 tabel dasar dan 38 objek SQL total**, baris/hash identik. Suite juga mencakup simulasi kehilangan dan pemulihan pada salinan non-produksi.
+## Berkas Tugas 4
 
-Hasil arsip tidak dipresentasikan sebagai pengujian baru. Lokasi yang benar-benar ditemukan pada laptop pemilik, SHA-256 kedua dump dan metadata restore dicatat pada [bukti backup](docs/BUKTI-BACKUP.md).
+| Instruksi | Lokasi |
+|---|---|
+| Source atau link repository | Repository ini dan [website](website/) |
+| Migrasi perubahan requirement | Empat skrip pada [sql](sql/) dan [riwayat migrasi](docs/RIWAYAT-MIGRASI.md) |
+| Backup atau bukti lokasi | [Bukti backup kelompok](docs/BUKTI-BACKUP.md) dan [hasil pemeriksaan lokal](docs/BUKTI-FINAL-LOKAL.json) |
 
-Jika data operasional berubah setelah snapshot, pemilik dapat menjalankan pengujian dan builder paket final kembali dari perangkat finalisasi yang sesuai. Paket baru perlu ditinjau dan provenance diperbarui berdasarkan hasilnya; jangan sekadar mengganti hash untuk melewati pemeriksaan.
+Schema demo dan seed fiktif disediakan pada `demo/schema.sql` serta `tools/seed_demo_r03.php`. Data publik dibuat baru. Backup final kelompok tetap disimpan privat pada lokasi yang tercatat dalam bukti; file tersebut dapat diserahkan melalui kanal pengumpulan resmi.
+
+Empat migrasi adalah riwayat perubahan dari baseline Tugas 1–3; schema demo sudah mencakup hasilnya. Jangan mengulang migrasi pada database final/demo yang sudah terpasang.
+
+Laporan PDF, video 10–15 menit, logbook dan identitas anggota mengikuti instruksi dosen. [Pemetaan pengumpulan](docs/PENGUMPULAN-T4.md).
+
+## Memakai data arsip kelompok
+
+Anggota/penguji yang memerlukan data snapshot kelompok dapat memperoleh paket `KALAWA_T4_SIAP_PASANG` secara privat dan menggunakan `Pasang-Dari-Clone.ps1 -PaketFinal 'D:\KALAWA_T4_SIAP_PASANG'`, lalu mengulang dengan `-Pasang`. Ini alternatif pemasangan pada tujuan kosong; satu instalasi tidak ditimpa oleh profil lain. Password akun snapshot dibagikan privat.
+
+Pemilik tetap dapat menjalankan `Periksa-Final-Lokal.ps1` untuk membuktikan source GitHub sama dengan htdocs dan arsip kelompok. Pemeriksa itu memakai paket privat asli; installer demo publik memakai schema dan seed baru.
+
+## Struktur
+
+| Lokasi | Isi |
+|---|---|
+| `website/` | 66 berkas final R05 |
+| `demo/` | Schema publik dan manifest keutuhan demo |
+| `tools/` | Pendukung pengujian, installer dan generator data demo |
+| `sql/` | Empat migrasi historis |
+| `uji/` | Suite regresi serta fixture salinan |
+| `docs/` | Instalasi, pengujian, bukti backup dan pengumpulan |
 
 ## Kendala umum
 
 | Gejala | Pemeriksaan |
 |---|---|
-| Repository not found | Periksa URL, akun GitHub dan penerimaan undangan repo Private |
-| Skrip tidak ditemukan | Pastikan PowerShell berada di root clone, yang memuat README dan skrip terkait |
-| Paket/manifest tidak ditemukan | `-PaketFinal` harus menunjuk folder lengkap yang berisi MANIFEST-PAKET.json |
-| Source atau manifest paket berbeda | Gunakan snapshot final yang sesuai; tinjau perubahan sebelum memperbarui provenance |
-| Database/site/config sudah ada | Installer hanya untuk tujuan kosong; gunakan lingkungan yang sesuai tanpa menghapus instalasi aktif |
-| Access denied saat instalasi | Periksa akun admin MariaDB dan gunakan `-DenganPassword` bila perlu |
-| could not find driver | Periksa PHP CLI yang dipakai dan ekstensi PDO MySQL |
-| Halaman localhost 404 | Periksa Apache, port HTTP dan nama folder website |
-| Uji belum seluruhnya PASS | Baca FAIL/BLOCKED di ringkasan; jumlah PASS saja belum cukup |
+| Skrip tidak ditemukan | Pilih folder yang memuat README dan Pasang-Demo.ps1; periksa folder ganda setelah ekstraksi |
+| PHP tidak ditemukan | Sesuaikan `-Php` dengan lokasi XAMPP |
+| Access denied | Periksa akun admin MariaDB; gunakan `-DenganPassword` jika perlu |
+| Database/site/config sudah ada | Installer mempertahankan instalasi yang ada; gunakan tujuan/laptop baru yang sesuai |
+| could not find driver | Periksa ekstensi PDO MySQL pada PHP XAMPP |
+| Halaman 404 | Periksa Apache, port HTTP dan folder situs |
+| Source/demo berubah | Peroleh snapshot yang sesuai dan periksa perubahan sebelum memperbarui manifest |
+| Uji belum seluruhnya PASS | Baca FAIL/BLOCKED pada ringkasan |
 
-GitHub menyediakan source dan kolaborasi; PHP/MariaDB tetap dijalankan pada XAMPP/server yang sesuai. [GitHub Pages tidak menjalankan PHP](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
+GitHub menyimpan source; aplikasi PHP/MariaDB dijalankan lokal di XAMPP/server yang sesuai. GitHub Pages tidak menjalankan PHP.
 
-## Dokumen pendukung
-
-- [Matriks kesesuaian Tugas 1–4](docs/MATRIKS-TUGAS.md).
-- [Cakupan enam role](uji/CAKUPAN-DAN-ROLE.md).
-- [Instalasi dan parameter](docs/INSTALASI-LOKAL.md).
-- [Pengujian dan batas bukti](docs/PENGUJIAN.md).
-- [Pemeriksaan serta push dokumentasi](docs/PUSH-GITHUB.md).
-- [Pemetaan berkas pengumpulan](docs/PENGUMPULAN-T4.md).
-- [Provenance source dan backup R05](docs/PROVENANSI-FINAL-R05.json).
+[Panduan demo](docs/DEMO-PUBLIK.md) · [Instalasi](docs/INSTALASI-LOKAL.md) · [Pengujian](docs/PENGUJIAN.md) · [Validasi demo](docs/VALIDASI-DEMO-R03.md)

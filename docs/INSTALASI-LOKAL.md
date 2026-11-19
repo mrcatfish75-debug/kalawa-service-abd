@@ -1,26 +1,28 @@
-# Instalasi dari clone
+# Instalasi Kalawa Service
 
-Panduan lengkap ada pada bagian **Instalasi pada laptop Windows lain dari clone** di [README](../README.md). Urutannya: siapkan XAMPP baseline, clone repository, peroleh paket database privat, periksa, pasang, login, lalu uji.
+Panduan lengkap Download ZIP/clone, XAMPP, akun role, pemasangan dan pengujian ada pada [README](../README.md).
 
-## Parameter peluncur
+## Demo publik
 
-| Parameter | Nilai bawaan/kegunaan |
-|---|---|
-| `-PaketFinal` | Wajib: folder paket lengkap yang memuat MANIFEST-PAKET.json dan database |
-| `-Target` | C:\xampp\htdocs\kalawa-service-f1-korporat-uji |
-| `-Php` | C:\xampp\php\php.exe |
-| `-Port` | 3306, port MariaDB |
-| `-AdminUser` | root, akun admin MariaDB lokal |
-| `-DenganPassword` | Minta password admin secara tersembunyi |
-| `-Pasang` | Lakukan pemasangan; tanpa switch ini hanya pemeriksaan |
+Tidak memerlukan backup privat atau Git jika memakai Download ZIP. Dari root hasil ekstraksi:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Periksa-Repo.ps1
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Demo.ps1
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Demo.ps1 -Pasang
+```
+
+Gunakan -DenganPassword untuk admin MariaDB berpassword. Parameter lainnya: -Target, -Php, -Port dan -AdminUser. Installer membuat schema/data fiktif pada tujuan kosong dan mempertahankan 66 source R05.
+
+Login pada /kalawa-service-f1-korporat-uji/login.php. Password akun demo 123456781234; username utama owner_demo, admin_demo, kasir_demo, mekanik_demo, gudang_demo dan auditor_demo.
+
+## Snapshot kelompok
+
+Untuk memakai data arsip asli tugas, peroleh paket lengkap secara privat:
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Dari-Clone.ps1 -PaketFinal 'D:\KALAWA_T4_SIAP_PASANG'
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Pasang-Dari-Clone.ps1 -PaketFinal 'D:\KALAWA_T4_SIAP_PASANG' -Pasang
 ```
 
-Peluncur memeriksa 66 source dan 123 berkas paket, lalu menggunakan installer final di paket tersebut. Source yang diinstal dari paket sama dengan clone. Tujuan harus kosong dan nama folder situs tetap mengikuti pengaman R05.
-
-Password aplikasi dipertahankan dari backup dan dibagikan privat. Installer membuat password SQL service user baru dan menyimpan konfigurasi di luar htdocs.
-
-Pada laptop pemilik yang sudah menjalankan Kalawa, gunakan pemeriksa final untuk membandingkan source, bukan peluncur pemasangan ulang.
+Kedua profil memakai identifier aplikasi yang sama, sehingga installer menolak jika Kalawa/config/database/user tersebut sudah ada. Akun snapshot tetap seperti backup; akun demo hanya dibuat pada instalasi demo baru. Gunakan pemeriksa final untuk laptop pemilik yang sudah terpasang.
