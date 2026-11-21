@@ -1,0 +1,179 @@
+{
+  "format": "KALAWA_AUDIT_BUKTI_T4_20261121_PUBLIC",
+  "status": "PASS_BUKTI_TEKNIS",
+  "report_final_pdf_status": "BELUM_DIVERIFIKASI_DALAM_ARSIP_INI",
+  "submission_status": "BELUM_ADA_BUKTI_PENGUMPULAN",
+  "execution": {
+    "start_wib": "2026-11-21T21:15:48+07:00",
+    "end_wib": "2026-11-21T21:17:24+07:00",
+    "php": "8.2.12",
+    "mariadb": "10.4.32-MariaDB",
+    "http_server": "PHP CLI pada salinan terisolasi",
+    "source_application": "CETAK_R05",
+    "application_files_verified": 66,
+    "php_lint_files": 49,
+    "source_files_and_data_unchanged": true
+  },
+  "repository_checked": {
+    "repository": "mrcatfish75-debug/kalawa-service-abd",
+    "branch": "main",
+    "commit_before_documentation_update": "0e75628826e57f74ccfc8fc36e1b56e8f5b6f8cf",
+    "website_tree": "5c357ae7ead27e3d5d28231135d8559696c56756",
+    "matching_application_sha256": 66,
+    "matching_primary_migrations": 4
+  },
+  "archive": {
+    "name": "PAKET_BUKTI_T4.zip",
+    "bytes": 7390928,
+    "sha256": "2d18a7c02a5a01c7d87893d5f59433521d97c7bee61001af81e16d959c9767ab",
+    "entries": 139,
+    "manifest_sha256": "2f741747e60690de9ace89bc535d802f7b7c2b02388760465489600c1c8d3316",
+    "files_verified_against_manifest": 138,
+    "hash_mismatches": 0,
+    "public_upload_of_raw_archive": false
+  },
+  "tests": {
+    "PASS": 442,
+    "FAIL": 0,
+    "BLOCKED": 0
+  },
+  "login": {
+    "accounts": 22,
+    "all_pass": true,
+    "roles": [
+      "rl_branch_admin",
+      "rl_cashier_ops",
+      "rl_internal_audit",
+      "rl_inventory_ops",
+      "rl_owner_ops",
+      "rl_service_tech"
+    ],
+    "branches": [
+      "CBG001",
+      "CBG002",
+      "CBG003",
+      "CBG004"
+    ],
+    "temporary_accounts_only_in_capture_clone": true
+  },
+  "capture": {
+    "primary_groups": 18,
+    "png_files": 84,
+    "captures_with_viewport_variants": 42,
+    "pdf_files": 7,
+    "all_sample_pdfs_one_page": true,
+    "missing": [],
+    "png_integrity_checked": true,
+    "representative_fullpage_images_visually_reviewed": 42,
+    "pdf_render_reviewed": 7,
+    "screenshots_or_pdfs_published_here": false,
+    "case_notes": "Penampil JSON diberi label; bukti historis bukan layar sebelum perbaikan yang direkayasa."
+  },
+  "corporate": {
+    "fleet_motor_count": 3,
+    "invoice": {
+      "id_tagihan": 20,
+      "jumlah_wo": 2,
+      "status": "LUNAS",
+      "nilai": "150000.00",
+      "sifat": "Pelunasan baru melalui browser pada salinan, bukan pada website utama."
+    },
+    "payment_from_browser_then_sql_verified": true
+  },
+  "snapshots": {
+    "active_source_before_capture_fixture": {
+      "akun_aplikasi": 64,
+      "work_order": 83,
+      "penerimaan_kas": 33
+    },
+    "capture_after_fixture_and_invoice_payment": {
+      "akun_aplikasi": 86,
+      "work_order": 129,
+      "penerimaan_kas": 42
+    },
+    "income_CBG001_before": "1456729.60",
+    "income_CBG001_after": "1606729.60",
+    "change_due_to_invoice_in_capture_clone": "150000.00",
+    "other_three_branches_unchanged": true,
+    "report_images_capture_before_invoice_payment": true,
+    "regression_clone_is_separate": true
+  },
+  "historical_debugging": {
+    "original_execution_wib": "2026-11-21T14:56:48+07:00",
+    "original_json_sha256": "ca60642414b684d925f9762dc7532edbe89d06278ccc674a2240a90f229ae698",
+    "missing_before": 5,
+    "value_before": "1155000.00",
+    "missing_after": {
+      "jumlah": 0,
+      "nilai": "0.00"
+    },
+    "inserted_receipts": 5,
+    "inserted_audits": 5,
+    "receipt_rows_before": 20,
+    "receipt_rows_after": 25,
+    "audit_rows_before": 60,
+    "audit_rows_after": 65,
+    "original_payment_datetime_known": false,
+    "original_cashier_known": false,
+    "scenario_datetime_policy": "Asumsi data contoh: tanggal selesai WO",
+    "reconstruction_operator_is_not_asserted_as_original_cashier": true
+  },
+  "backups": [
+    {
+      "file_in_private_archive": "05-backup-recovery/database/backup-sumber-aktif.sql",
+      "scope": "Sumber sebelum fixture capture; bukan snapshot sesudah fixture",
+      "bytes": 247645,
+      "sha256": "3c4fe3b0a655bdacf0da36fc0f63817f219b73c5f4925811ad1321a5dad8a8b1"
+    },
+    {
+      "file_in_private_archive": "05-backup-recovery/database/backup-bukti-lengkap.sql",
+      "scope": "Salinan capture sesudah fixture dan pelunasan invoice; full restore diverifikasi",
+      "bytes": 347482,
+      "sha256": "696109cb8252a0f29b179ddf4bb97253af205bfd2dc086694530cd3f04b044ed"
+    },
+    {
+      "file_in_private_archive": "05-backup-recovery/database/backup-simulasi-satu-tabel.sql",
+      "scope": "Tabel contoh nonproduksi untuk simulasi kehilangan",
+      "bytes": 360,
+      "sha256": "77b06a86cd42c0479c95e7dc2a28a27bbeb28683cd6323624e2795f0d130420b"
+    }
+  ],
+  "full_restore": {
+    "status": "PASS",
+    "time_wib": "2026-11-21T21:17:18+07:00",
+    "tables": 26,
+    "total_definitions_including_tables": 38,
+    "definition_types": {
+      "FUNCTION": 1,
+      "PROCEDURE": 4,
+      "TABLE": 26,
+      "TRIGGER": 4,
+      "VIEW": 3
+    },
+    "before_equals_restored": true,
+    "verification_database_cleaned": true
+  },
+  "mini_recovery": {
+    "status": "PASS",
+    "time_wib": "2026-11-21T21:17:18+07:00",
+    "before_rows": 3,
+    "after_loss_rows": 2,
+    "table_was_dropped": true,
+    "restored_rows": 3,
+    "before_sha256": "cc3395e5cc45d90945a6ec8025fe4af4eb8697aaf0815c647b4ba41dd2413c96",
+    "after_loss_sha256": "4d29a6448d1433c88ecb111459a36a6044acfac0a20c89a2047ac92cb7fd9448",
+    "restored_sha256": "cc3395e5cc45d90945a6ec8025fe4af4eb8697aaf0815c647b4ba41dd2413c96",
+    "before_equals_restored": true,
+    "database_cleaned": true
+  },
+  "temporary_clone_cleanup_all_pass": true,
+  "not_verified_by_this_archive": [
+    "Full manual transaction flow on active Apache",
+    "Installation on a separate friend laptop",
+    "Physical printer",
+    "Real phone/tablet interactions or keyboard navigation",
+    "Rendered multi-page PDF",
+    "Assembly and submission of final report PDF"
+  ],
+  "privacy": "Only selected summary fields and generic test outcomes are public; raw SQL, connection config, sessions, hostname, contact data and raw screenshots remain private."
+}

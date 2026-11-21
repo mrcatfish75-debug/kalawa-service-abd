@@ -1,0 +1,2665 @@
+{
+  "format": "KALAWA_HASIL_UJI_T4_20261121_PUBLIC",
+  "execution_start_wib": "2026-11-21T21:15:48+07:00",
+  "execution_end_wib": "2026-11-21T21:17:24+07:00",
+  "scope": "Suite HTTP/SQL pada salinan regresi; source R05; publikasi ringkas tanpa konfigurasi atau dump",
+  "ringkasan": {
+    "PASS": 442,
+    "FAIL": 0,
+    "BLOCKED": 0
+  },
+  "kasus": [
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "akun_aplikasi SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "pegawai SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "cabang SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "pelanggan SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "motor SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "kepemilikan_motor SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "mekanik SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "mekanik_pembantu_wo SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "jasa_servis SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "suku_cadang SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "supplier SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "supplier_suku_cadang SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "stok_cabang SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "work_order SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "detail_wo_jasa SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "detail_wo_suku_cadang SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "pelanggan_korporat SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "kontrak_korporat SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "work_order_korporat SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "tagihan_korporat SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "detail_tagihan_korporat SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "pembayaran SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "penerimaan_kas SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "mutasi_stok_manual SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "log_audit_operasional SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "garansi SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "pelanggan INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "pelanggan UPDATE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "pelanggan DELETE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "motor INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "motor UPDATE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "motor DELETE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "kepemilikan_motor INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "kepemilikan_motor UPDATE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "jasa_servis INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "jasa_servis UPDATE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "jasa_servis DELETE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "suku_cadang INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "suku_cadang UPDATE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "suku_cadang DELETE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "supplier INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "supplier UPDATE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "supplier DELETE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "work_order INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "detail_wo_jasa INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "detail_wo_jasa UPDATE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "detail_wo_jasa DELETE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "mekanik_pembantu_wo INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "mekanik_pembantu_wo DELETE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "detail_wo_suku_cadang INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "stok_cabang INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "mutasi_stok_manual INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "pelanggan_korporat INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "pelanggan_korporat UPDATE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "pelanggan_korporat DELETE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "kontrak_korporat INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "work_order_korporat INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "tagihan_korporat INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "detail_tagihan_korporat INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "pembayaran INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "penerimaan_kas INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "work_order UPDATE kolom terbatas",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "stok_cabang UPDATE kolom terbatas",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "pembayaran UPDATE kolom terbatas",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "tagihan_korporat UPDATE kolom terbatas",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "supplier_suku_cadang INSERT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "supplier_suku_cadang DELETE",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Izin akun database website asli (PREPARE tanpa EXECUTE)",
+      "kasus": "vw_ringkasan_transaksi_terpadu SELECT",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Isolasi pengujian",
+      "kasus": "Salinan awal identik dengan snapshot sumber",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Login HTTP owner",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Login HTTP admin1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Login HTTP admin2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Login HTTP cash1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Login HTTP cash2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Login HTTP stock1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Login HTTP stock2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Login HTTP tech1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Login HTTP helper",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Login HTTP tech2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Login HTTP audit",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Password salah tidak membuka panel",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Login tanpa CSRF ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Lima login gagal memblokir percobaan berikutnya",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Logout GET dan POST tanpa CSRF ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Login dan sesi",
+      "kasus": "Logout POST sah mengakhiri sesi",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET pelanggan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET motor.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET jasa.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET suku_cadang.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET supplier.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET work_order.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET pembayaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET tagihan_korporat.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET stok.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET laporan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET pendaftaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET katalog.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET audit.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET pekerjaan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "owner GET panduan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET pelanggan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET motor.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET jasa.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET suku_cadang.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET supplier.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET work_order.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET pembayaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET tagihan_korporat.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET stok.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET laporan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET pendaftaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET katalog.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET audit.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET pekerjaan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 GET panduan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET pelanggan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET motor.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET jasa.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET suku_cadang.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET supplier.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET work_order.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET pembayaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET tagihan_korporat.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET stok.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET laporan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET pendaftaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET katalog.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET audit.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET pekerjaan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 GET panduan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET pelanggan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET motor.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET jasa.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET suku_cadang.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET supplier.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET work_order.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET pembayaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET tagihan_korporat.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET stok.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET laporan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET pendaftaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET katalog.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET audit.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET pekerjaan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 GET panduan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET pelanggan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET motor.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET jasa.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET suku_cadang.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET supplier.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET work_order.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET pembayaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET tagihan_korporat.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET stok.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET laporan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET pendaftaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET katalog.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET audit.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET pekerjaan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 GET panduan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET pelanggan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET motor.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET jasa.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET suku_cadang.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET supplier.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET work_order.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET pembayaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET tagihan_korporat.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET stok.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET laporan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET pendaftaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET katalog.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET audit.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET pekerjaan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit GET panduan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 POST terlarang pelanggan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 POST terlarang motor.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 POST terlarang jasa.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 POST terlarang suku_cadang.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 POST terlarang supplier.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 POST terlarang pembayaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "admin1 POST terlarang stok.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 POST terlarang pelanggan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 POST terlarang motor.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 POST terlarang jasa.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 POST terlarang suku_cadang.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 POST terlarang supplier.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 POST terlarang work_order.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "cash1 POST terlarang stok.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 POST terlarang pelanggan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 POST terlarang motor.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 POST terlarang jasa.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 POST terlarang suku_cadang.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 POST terlarang supplier.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 POST terlarang work_order.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "stock1 POST terlarang pembayaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 POST terlarang pelanggan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 POST terlarang motor.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 POST terlarang jasa.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 POST terlarang suku_cadang.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 POST terlarang supplier.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 POST terlarang work_order.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 POST terlarang pembayaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "tech1 POST terlarang stok.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit POST terlarang pelanggan.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit POST terlarang motor.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit POST terlarang jasa.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit POST terlarang suku_cadang.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit POST terlarang supplier.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit POST terlarang work_order.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit POST terlarang pembayaran.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "audit POST terlarang stok.php",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "Halaman awal cash1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "Halaman awal stock1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "Halaman awal tech1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "RBAC enam role melalui HTTP",
+      "kasus": "Halaman awal audit",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Tambah jasa",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Baca dan cari jasa",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Ubah jasa",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Nama duplikat jasa ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Nama kosong jasa ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "CSRF kosong jasa ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Hapus jasa yang tidak direferensikan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Tambah part",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Baca dan cari part",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Ubah part",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Nama duplikat part ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Nama kosong part ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "CSRF kosong part ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Hapus part yang tidak direferensikan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Tambah supplier",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Baca dan cari supplier",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Ubah supplier",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Nama duplikat supplier ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Nama kosong supplier ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "CSRF kosong supplier ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Hapus supplier yang tidak direferensikan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Hubungkan supplier dengan barang",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Supplier yang memasok barang tidak dapat dihapus",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "CRUD master Owner",
+      "kasus": "Lepas lalu pasang kembali hubungan supplier",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Admin mendaftarkan pelanggan dan motor atomik",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Admin cabang kedua mendaftarkan motor",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Pendaftaran tidak menguasai cabang favorit global",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Motor duplikat membatalkan pelanggan baru",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Motor baru untuk pelanggan terdaftar",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Owner tambah pelanggan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Owner ubah pelanggan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Nomor identitas duplikat ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Owner tambah motor",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Owner ubah motor",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Rangka atau mesin duplikat ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Pemilik aktif dan histori perpindahan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Motor yang punya histori tidak dapat dihapus",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Owner hapus pelanggan tanpa relasi",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pelanggan, motor dan kepemilikan",
+      "kasus": "Owner hapus motor tanpa relasi",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Gudang dan persediaan",
+      "kasus": "Mutasi awal",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Gudang dan persediaan",
+      "kasus": "Mutasi masuk",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Gudang dan persediaan",
+      "kasus": "Mutasi koreksi",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Gudang dan persediaan",
+      "kasus": "Mutasi minimum",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Gudang dan persediaan",
+      "kasus": "Riwayat mutasi menyimpan pencatat",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Gudang dan persediaan",
+      "kasus": "Replay mutasi tidak menambah stok dua kali",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Gudang dan persediaan",
+      "kasus": "Jumlah negatif ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Gudang dan persediaan",
+      "kasus": "Snapshot stok kedaluwarsa tidak menimpa perubahan baru",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Gudang dan persediaan",
+      "kasus": "Gudang menolak GET cabang lain",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Gudang dan persediaan",
+      "kasus": "Gudang menolak POST cabang lain",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Gudang dan persediaan",
+      "kasus": "Gudang tanpa CSRF ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Gudang dan persediaan",
+      "kasus": "Katalog menampilkan stok dan supplier",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "WO tanpa motor ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Admin membuat WO cabangnya",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "GET WO cabang lain ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Tambah jasa WO",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Ubah biaya jasa WO",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Hapus dan tambah ulang jasa WO",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Jasa master terpakai tidak dapat dihapus",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Mekanik pembantu ditambahkan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Hapus lalu pasang kembali mekanik pembantu",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "POST jasa cabang lain dan CSRF kosong ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Mekanik cabang lain tidak dapat ditambahkan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Pembantu membaca tetapi tidak memulai WO",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Mekanik tanpa penugasan tidak membaca WO",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Stok tidak cukup menolak pemakaian tanpa mutasi",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Pemakaian barang mengurangi stok tepat dua",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Replay pemakaian barang tidak mengurangi stok lagi",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "WO dengan pemakaian barang tidak dapat dibatalkan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Lompatan Menunggu ke Selesai ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Mekanik melihat item tanpa harga",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Status Menunggu ke Proses ke Selesai dan dua audit",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Mulai ulang pekerjaan selesai ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Mekanik tidak membatalkan pekerjaan atau melewati CSRF",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Jasa pada WO selesai dikunci",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Work Order, jasa, barang dan mekanik",
+      "kasus": "Admin membatalkan WO kosong dengan satu audit",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pembayaran individual dan bukti",
+      "kasus": "Rincian kasir memuat kode item harga qty dan metode",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pembayaran individual dan bukti",
+      "kasus": "Kasir cabang lain tidak membaca rincian",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pembayaran individual dan bukti",
+      "kasus": "Buat WO belum selesai untuk uji penolakan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pembayaran individual dan bukti",
+      "kasus": "WO belum selesai tidak menampilkan form pelunasan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pembayaran individual dan bukti",
+      "kasus": "Pelunasan TUNAI presisi dan tidak ganda",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pembayaran individual dan bukti",
+      "kasus": "Pelunasan TRANSFER presisi dan tidak ganda",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pembayaran individual dan bukti",
+      "kasus": "Pelunasan QRIS presisi dan tidak ganda",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pembayaran individual dan bukti",
+      "kasus": "Pelunasan KARTU_DEBIT presisi dan tidak ganda",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pembayaran individual dan bukti",
+      "kasus": "POST pembayaran cabang lain ditolak tanpa mutasi",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pembayaran individual dan bukti",
+      "kasus": "Diskon berlebih dan CSRF kosong tidak menyimpan uang",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Pembayaran individual dan bukti",
+      "kasus": "Snapshot biaya berubah menolak pembayaran lama",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Daftar perusahaan S",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Tambah kontrak S",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Kontrak tumpang tindih S ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Motor perusahaan S",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Daftar perusahaan M",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Tambah kontrak M",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Kontrak tumpang tindih M ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Motor perusahaan M",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Plafon menolak estimasi yang melebihi kredit",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "WO korporat terkait kontrak dan kena batas kumulatif",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Terbitkan tagihan satu cabang",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Pelunasan kasir cabang dan replay ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Terbitkan tagihan campuran",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Kasir tidak membuka tagihan lintas cabang",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Pelunasan Owner lintas cabang dan replay ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Kontrak tidak dapat dikelola admin1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Kontrak tidak dapat dikelola cash1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Kontrak tidak dapat dikelola stock1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Kontrak tidak dapat dikelola tech1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Korporat, kontrak, plafon dan tagihan",
+      "kasus": "Kontrak tidak dapat dikelola audit",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "View satu baris untuk setiap WO",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "View tidak dapat diperbarui langsung",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "Status dan metode korporat S",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "Nilai invoice S tidak digandakan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "Halaman audit owner menelusuri invoice S",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "Halaman audit audit menelusuri invoice S",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "Status dan metode korporat M",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "Nilai invoice M tidak digandakan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "Halaman audit owner menelusuri invoice M",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "Halaman audit audit menelusuri invoice M",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "WO korporat belum ditagihkan bukan penerimaan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "Individual lunas memakai nilai bersih diskon",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "WO batal tidak ditagih",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "Semua korporat lunas awal terbaca lunas",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Audit terpadu Tugas 4",
+      "kasus": "View baseline Tugas 3 tetap tersedia",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan riwayat oleh owner",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan pendapatan oleh owner",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan pemakaian oleh owner",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan stok oleh owner",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan riwayat oleh admin1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan pendapatan oleh admin1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan pemakaian oleh admin1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan stok oleh admin1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan riwayat oleh cash1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan pendapatan oleh cash1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan pemakaian oleh cash1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan stok oleh cash1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan riwayat oleh audit",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan pendapatan oleh audit",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan pemakaian oleh audit",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Laporan stok oleh audit",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Cakupan laporan Gudang pemakaian",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Cakupan laporan Gudang stok",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Cakupan laporan Gudang riwayat",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Cakupan laporan Gudang pendapatan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Rentang kosong mengembalikan hasil kosong",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Rentang terbalik ditolak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Filter cabang lain tidak dapat dipakai Admin",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Auditor membaca rincian item dan pembayaran",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Auditor tidak menulis rincian atau audit",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Jejak audit dan penerimaan kas dapat dicari",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Pendapatan tidak berlipat akibat JOIN detail",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Laporan, audit dan rincian",
+      "kasus": "Stok minimum menampilkan barang yang kurang",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Objek SQL Tugas 2-3",
+      "kasus": "Trigger menolak tanggal masuk masa depan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Objek SQL Tugas 2-3",
+      "kasus": "Stored procedure sp_riwayat_servis_motor",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Objek SQL Tugas 2-3",
+      "kasus": "Stored procedure sp_daftar_wo_cabang",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Objek SQL Tugas 2-3",
+      "kasus": "Stored procedure sp_rincian_tagihan_wo",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Objek SQL Tugas 2-3",
+      "kasus": "Buat fixture garansi belum lunas",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Objek SQL Tugas 2-3",
+      "kasus": "Garansi SQL belum berlaku sebelum pembayaran lunas",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Objek SQL Tugas 2-3",
+      "kasus": "Rincian UI garansi belum lunas menampilkan Belum berlaku",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Objek SQL Tugas 2-3",
+      "kasus": "Garansi lunas aktif dan tampil pada rincian",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Objek SQL Tugas 2-3",
+      "kasus": "Garansi kedaluwarsa sesuai tanggal selesai",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Objek SQL Tugas 2-3",
+      "kasus": "WO tanpa garansi memberi status TIDAK ADA GARANSI",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Objek SQL Tugas 2-3",
+      "kasus": "Ekspor SQL dan pemulihan tabel simulasi kehilangan data",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · navigasi enam role",
+      "kasus": "Menu ponsel dan identitas owner",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · navigasi enam role",
+      "kasus": "Menu ponsel dan identitas admin1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · navigasi enam role",
+      "kasus": "Menu ponsel dan identitas cash1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · navigasi enam role",
+      "kasus": "Menu ponsel dan identitas stock1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · navigasi enam role",
+      "kasus": "Menu ponsel dan identitas tech1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · navigasi enam role",
+      "kasus": "Menu ponsel dan identitas audit",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · navigasi enam role",
+      "kasus": "Tab cash1 tidak menawarkan master Owner",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · navigasi enam role",
+      "kasus": "Tab stock1 tidak menawarkan master Owner",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · navigasi enam role",
+      "kasus": "Tab tech1 tidak menawarkan master Owner",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · navigasi enam role",
+      "kasus": "Tab audit tidak menawarkan master Owner",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · navigasi enam role",
+      "kasus": "Login memakai label portal pegawai",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Jasa halaman 1 berisi 25 baris",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Jasa halaman 2 berisi 25 baris",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Jasa halaman 3 berisi 11 baris",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Seluruh 61 jasa dapat dijangkau tanpa batas 50 lama",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Input halaman aman: 0",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Input halaman aman: -2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Input halaman aman: abc",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Input halaman aman: 999999999",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Input halaman aman: 1%20OR%201=1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Input halaman aman: %3Cscript%3E",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Input halaman aman: %5B%5D",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Array parameter halaman tidak menyebabkan fatal",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Tautan dan lompat halaman mempertahankan pencarian",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Pagination tidak membuat aksi POST tambahan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Halaman daftar dapat dibaca: pelanggan.php?hal_pelanggan=2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Halaman daftar dapat dibaca: motor.php?hal_motor=2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Halaman daftar dapat dibaca: supplier.php?hal_supplier=2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Halaman daftar dapat dibaca: suku_cadang.php?hal_barang=2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Halaman daftar dapat dibaca: work_order.php?hal_wo=2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Halaman daftar dapat dibaca: pembayaran.php?status=SEMUA&hal_bayar=2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Halaman daftar dapat dibaca: tagihan_korporat.php?hal_tagihan=2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Halaman daftar dapat dibaca: stok.php?hal_stok=2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Halaman daftar dapat dibaca: audit.php?hal_transaksi=2&hal_perubahan=2&hal_kas=2&hal_mutasi=2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Halaman daftar dapat dibaca: katalog.php?hal_jasa=2&hal_barang=2&hal_supplier=2",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Cabang kedua tetap tidak terlihat di semua halaman WO admin",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Mekanik tetap ditolak saat memanggil pagination master",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Halaman kedua Pekerjaan Saya tetap memakai penugasan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Laporan simpan seluruh baris cetak yang dimuat",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "UI R04 · pagination riil dan keutuhan baca",
+      "kasus": "Berpindah daftar dan halaman tidak mengubah tabel",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Judul, kop dan metadata laporan riwayat",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Judul, kop dan metadata laporan pendapatan",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Judul, kop dan metadata laporan pemakaian",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Judul, kop dan metadata laporan stok",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Judul empat jenis laporan saling berbeda",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Kop cabang mengikuti role admin1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Kop cabang mengikuti role cash1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Kop cabang mengikuti role stock1",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Filter cabang Owner mengubah nama dan alamat kop",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Laporan stok tidak mengklaim periode transaksi",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Riwayat mencetak seluruh baris yang dimuat dari halaman kedua",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Laporan invalid tidak menghasilkan kop dokumen sukses",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Bukti pembayaran memakai nomor WO dan judul khusus",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "WO belum lunas tidak diberi judul bukti pembayaran",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Dokumen korporat BELUM_LUNAS",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Dokumen korporat LUNAS",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Rincian servis menggunakan judul dan referensi WO",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Rincian Gudang tetap tidak memuat kolom harga",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Audit memiliki judul khusus dan peringatan halaman aktif",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Rincian terlarang tidak membocorkan kop cabang lain",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Filter nomor polisi tetap di-escape pada metadata cetak",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Kop memakai alamat cabang nyata dari database",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Cetak R05 · kop, konteks dan judul PDF",
+      "kasus": "Menyiapkan dokumen cetak tidak mengubah tabel",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Keutuhan sumber",
+      "kasus": "Objek SQL sumber tetap sama",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Keutuhan sumber",
+      "kasus": "Seluruh tabel sumber tetap sesuai snapshot",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    },
+    {
+      "modul": "Keutuhan sumber",
+      "kasus": "Seluruh file website sumber tetap sama",
+      "status": "PASS",
+      "detail": "Sesuai asersi"
+    }
+  ]
+}

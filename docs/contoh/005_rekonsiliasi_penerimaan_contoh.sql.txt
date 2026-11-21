@@ -1,0 +1,43 @@
+-- R01: ONLY for the five fictional assignment/test records in rencana.json.
+-- The CLI runner validates the exact rows, owner account, snapshot and transaction.
+-- Run through Rekonsiliasi-Penerimaan-R01.ps1, NOT directly through phpMyAdmin.
+-- Scenario assumption: payment time := WO completion time. Original time is unknown.
+-- Account 1 is the reconstruction operator, not an assertion about the original cashier.
+-- No USE, schema change, payment update or work-order update is performed here.
+
+INSERT INTO penerimaan_kas (no_work_order,id_tagihan,dicatat_pada,id_akun)
+SELECT w.no_work_order,NULL,w.tanggal_selesai,1
+FROM work_order w
+JOIN pembayaran p ON p.no_work_order=w.no_work_order
+WHERE w.no_work_order IN ('WO-2026-00087','WO-2026-00088','WO-2026-00090','WO-2026-00091','WO-2026-00092')
+  AND w.status_pekerjaan='SELESAI'
+  AND w.tanggal_selesai IS NOT NULL
+  AND p.status_pembayaran='LUNAS'
+  AND NOT EXISTS (SELECT 1 FROM work_order_korporat wk WHERE wk.no_work_order=w.no_work_order)
+  AND NOT EXISTS (SELECT 1 FROM penerimaan_kas k WHERE k.no_work_order=w.no_work_order);
+
+INSERT INTO log_audit_operasional
+    (objek_data,kunci_rekam,jenis_operasi,atribut_berubah,nilai_sebelum,nilai_sesudah,akun_sesi)
+SELECT 'penerimaan_kas',w.no_work_order,'REKONSTRUKSI','migrasi_penerimaan_contoh_r01',
+    JSON_OBJECT('penerimaan_kas',NULL,'total_bayar',p.total_bayar,'status_pembayaran',p.status_pembayaran),
+    JSON_OBJECT(
+        'versi','KALAWA_REKON_R01',
+        'sumber','DATA_CONTOH_TUGAS_AI_DAN_UJI_FITUR',
+        'tanggal_pelunasan_asli',NULL,
+        'tanggal_asli_terverifikasi',0,
+        'basis_tanggal_skenario','tanggal_selesai_wo',
+        'tanggal_skenario',DATE_FORMAT(k.dicatat_pada,'%Y-%m-%d %H:%i:%s'),
+        'id_penerimaan',k.id_penerimaan,
+        'id_operator_rekonstruksi',1,
+        'operator_adalah_kasir_asli',0
+    ),USER()
+FROM work_order w
+JOIN pembayaran p ON p.no_work_order=w.no_work_order
+JOIN penerimaan_kas k ON k.no_work_order=w.no_work_order
+WHERE w.no_work_order IN ('WO-2026-00087','WO-2026-00088','WO-2026-00090','WO-2026-00091','WO-2026-00092')
+  AND NOT EXISTS (
+      SELECT 1 FROM log_audit_operasional l
+      WHERE l.objek_data='penerimaan_kas'
+        AND l.kunci_rekam=w.no_work_order
+        AND l.atribut_berubah='migrasi_penerimaan_contoh_r01'
+  );

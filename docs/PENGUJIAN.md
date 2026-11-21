@@ -35,7 +35,7 @@ Gunakan -DenganPassword jika admin MariaDB berpassword dan sesuaikan -Target/-Ph
 
 Suite memakai salinan database/website, fixture sintetis, enam role, kasus negatif, kontrol cabang/penugasan, CRUD, WO, stok, status, pembayaran, korporat, laporan, audit dan recovery. Lihat [cakupan](../uji/CAKUPAN-DAN-ROLE.md). Hindari transaksi pengguna lain selama snapshot diuji.
 
-Bukti pada paket final R05 menunjukkan 442 PASS, 0 FAIL, 0 BLOCKED. Bukti restore full export/import mencakup 26 tabel dan 38 objek SQL dengan baris/hash identik. Persiapan GitHub tidak mengulang 442 transaksi atau menjalankan ulang restore database.
+Bukti arsip paket final R05 menunjukkan 442 PASS, 0 FAIL, 0 BLOCKED. Bukti restore full export/import mencakup 26 tabel dan 38 definisi objek total, termasuk tabel tersebut, dengan baris/hash identik. Waktu pengujian arsip tidak disamakan dengan waktu pemeriksaan GitHub.
 
 Catatan validasi patch sebelumnya dipertahankan pada VALIDASI-PAKET.md. Browser/cetak tetap mengikuti checklist; CLI tidak menguji setiap input, perangkat atau printer fisik.
 
@@ -45,3 +45,13 @@ Catatan validasi patch sebelumnya dipertahankan pada VALIDASI-PAKET.md. Browser/
 Demo telah dipasang nyata pada MariaDB 10.4.32, PHP 8.4.27 dan PowerShell 7.4.19 di Linux terisolasi. Sebelas akun demo login melalui HTTP ke halaman role yang benar. Suite yang sama menghasilkan 442 PASS, 0 FAIL, 0 BLOCKED pada data fiktif. Pemasangan ulang ditolak dan source/config tetap utuh.
 
 Lingkungan uji PHP memakai buffering/session/timezone yang sesuai baseline XAMPP. Pemeriksaan ini tidak menggantikan eksekusi Windows/Apache di laptop teman. Source aplikasi 66 berkas tidak diubah. Rincian ada pada VALIDASI-DEMO-R03.md.
+
+## Eksekusi bukti baru — 21 November 2026
+
+Pemilik telah menjalankan paket pengumpulan R02 di Windows dengan PHP 8.2.12 dan MariaDB 10.4.32, pukul 21:15:48–21:17:24 WIB. Hasilnya442 PASS/0 FAIL/0 BLOCKED,22 login fixture,18 kelompok gambar dan tujuh PDF. Satu salinan dipakai untuk screenshot, satu lagi untuk suite regresi; server HTTP keduanya memakai PHP CLI. Ini bukan pengujian lengkap Apache aktif atau laptop kedua.
+
+[Pemeriksaan hasil](BUKTI-T4-2026-11-21.md) mencakup validasi 138 checksum isi, kecocokan 66 source dan empat migrasi dengan GitHub, pemeriksaan 84 PNG/tujuh PDF, invoice dua WO yang benar-benar dilunasi, full export/import identik 26 tabel/38 definisi, dan simulasi kehilangan satu tabel. [Hasil kasus publik](HASIL-UJI-T4-20261121.json) tidak menyertakan konfigurasi, cookie atau dump database.
+
+Satu asumsi alat uji diperbaiki: pemeriksaan katalog kini mencari **kode barang fixture** dan memeriksa sel tabel, sehingga tidak bergantung pada barang muncul di halaman pertama ketika data latihan bertambah. Jumlah kasus tetap 442. Perubahan ini telah dipakai pada run bukti dan diuji dengan/tanpa fixture latihan lama; source website tetap66 berkas R05.
+
+Kriteria build: lint PHP lulus,66 hash source sesuai dan koneksi/objek yang diperlukan tersedia. Kriteria eksekusi suite: nol FAIL/BLOCKED, transaksi sah tersimpan, penolakan sesuai aturan, keutuhan sumber lulus, recovery data/objek identik. Lima skenario minimum dan peta bukti dijelaskan pada [checklist T4](CHECKLIST-T4.md). Pemeriksaan manual tambahan tetap dibedakan dari suite yang sudah PASS.

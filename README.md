@@ -6,6 +6,10 @@ Sistem operasional bengkel multi-cabang untuk proyek **Administrasi Basis Data �
 
 **Aplikasi final CETAK_R05 · 66 berkas source · Demo publik R03**
 
+**Pemeriksaan bukti terbaru: 21 November 2026, 21:15–21:17 WIB.** Pengumpulan pada salinan Windows/XAMPP menghasilkan **442 PASS, 0 FAIL, 0 BLOCKED**, 22 login, 18 kelompok gambar (84 PNG beserta varian), tujuh PDF, full restore identik serta simulasi kehilangan/pemulihan. Source aplikasi tetap sama dengan CETAK_R05. Lihat [hasil pemeriksaan](docs/BUKTI-T4-2026-11-21.md), [checklist Tugas 4](docs/CHECKLIST-T4.md), dan [ringkasan JSON](docs/BUKTI-T4-20261121.json).
+
+Bukti teknis untuk laporan telah tersedia. Penyusunan, pemeriksaan akhir dan pengumpulan **laporan PDF** tetap dicatat terpisah; paket bukti bukan laporan yang sudah dikumpulkan. Arsip screenshot/SQL lengkap disimpan privat.
+
 Repository menyediakan source final yang sama dengan website kelompok serta schema dan data contoh fiktif untuk mencoba aplikasi pada laptop lain. Demo dapat dipasang dari Download ZIP atau clone, tanpa memperoleh backup privat kelompok.
 
 ## Mulai cepat — Windows dan XAMPP
@@ -143,7 +147,7 @@ Schema demo dan seed fiktif disediakan pada `demo/schema.sql` serta `tools/seed_
 
 Empat migrasi adalah riwayat perubahan dari baseline Tugas 1–3; schema demo sudah mencakup hasilnya. Jangan mengulang migrasi pada database final/demo yang sudah terpasang.
 
-Laporan PDF, video 10–15 menit, logbook dan identitas anggota mengikuti instruksi dosen. [Pemetaan pengumpulan](docs/PENGUMPULAN-T4.md).
+Laporan PDF harus berisi gambar dan deskripsi aplikasi, CRUD, query JOIN, perubahan requirement, debugging, backup serta recovery. [Pemetaan pengumpulan dan status](docs/PENGUMPULAN-T4.md). Persyaratan tambahan hanya berlaku bila diberikan dalam instruksi dosen yang terpisah.
 
 ## Memakai data arsip kelompok
 

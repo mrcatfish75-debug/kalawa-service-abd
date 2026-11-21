@@ -104,7 +104,7 @@ final class KsSuite {
   $this->test('Gudang menolak GET cabang lain',function()use($code){$this->ok($this->c('stock2')->get('panel/stok.php?cabang_pilih=CBG001&barang_pilih='.$code),404);});
   $this->test('Gudang menolak POST cabang lain',function()use($code){$before=ksTableDigest($this->db,'stok_cabang');$this->ok($this->c('stock2')->request('POST','panel/stok.php',['csrf'=>$this->c('stock2')->csrf(),'kode_cabang'=>'CBG001','kode_suku_cadang'=>$code,'aksi'=>'masuk','jumlah'=>'1']),403);ksAssert(ksTableDigest($this->db,'stok_cabang')===$before);});
   $this->test('Gudang tanpa CSRF ditolak',function()use($code){$this->ok($this->c('stock1')->postForm($this->stockForm($code),['csrf'=>'','aksi'=>'masuk','jumlah'=>'1']),403);});
-  $this->test('Katalog menampilkan stok dan supplier',function()use($code){$r=$this->c('stock1')->get('panel/katalog.php');$this->ok($r);ksAssert(str_contains($r['body'],$code)&&str_contains($r['body'],'Daftar supplier'));});
+  $this->test('Katalog menampilkan stok dan supplier',function()use($code){$r=$this->c('stock1')->get('panel/katalog.php?q='.rawurlencode($code));$this->ok($r);ksAssert((bool)preg_match('~<td>\s*'.preg_quote(htmlspecialchars($code,ENT_QUOTES,'UTF-8'),'~').'\s*·~u',$r['body'])&&str_contains($r['body'],'Daftar supplier'),'Barang fixture tidak muncul dalam sel tabel katalog atau daftar supplier tidak tersedia.');});
  }
  private function workOrders():void {
   $this->t->group='Work Order, jasa, barang dan mekanik';$reg=$this->data['reg']??null;$j=$this->data['jasa']??null;$part=$this->data['part']??null;
